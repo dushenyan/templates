@@ -1,0 +1,1047 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "path": "/home/index",
+      "name": "home",
+      "component": "/home/index",
+      "meta": {
+        "icon": "HomeFilled",
+        "title": "首页",
+        "isLink": "",
+        "isHide": false,
+        "isFull": false,
+        "isAffix": true,
+        "isKeepAlive": true
+      }
+    },
+    {
+      "path": "/dataScreen",
+      "name": "dataScreen",
+      "component": "/dataScreen/index",
+      "meta": {
+        "icon": "Histogram",
+        "title": "数据大屏",
+        "isLink": "",
+        "isHide": false,
+        "isFull": true,
+        "isAffix": false,
+        "isKeepAlive": true
+      }
+    },
+    {
+      "path": "/playgrounds",
+      "name": "playgrounds",
+      "redirect": "/playgrounds/playgrounds/proTable",
+      "meta": {
+        "icon": "MessageBox",
+        "title": "游乐场",
+        "isLink": "",
+        "isHide": false,
+        "isFull": false,
+        "isAffix": false,
+        "isKeepAlive": true
+      },
+      "children": [
+        {
+          "path": "/playgrounds/proTable",
+          "name": "proTable",
+          "redirect": "/playgrounds/proTable/useProTable",
+          "meta": {
+            "icon": "MessageBox",
+            "title": "超级表格",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          },
+          "children": [
+            {
+              "path": "/playgrounds/proTable/useProTable",
+              "name": "useProTable",
+              "component": "/playgrounds/proTable/useProTable/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "使用 ProTable",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              },
+              "children": [
+                {
+                  "path": "/playgrounds/proTable/useProTable/detail/:id",
+                  "name": "useProTableDetail",
+                  "component": "/playgrounds/proTable/useProTable/detail",
+                  "meta": {
+                    "icon": "Menu",
+                    "title": "ProTable 详情",
+                    "activeMenu": "/proTable/useProTable",
+                    "isLink": "",
+                    "isHide": true,
+                    "isFull": false,
+                    "isAffix": false,
+                    "isKeepAlive": true
+                  }
+                }
+              ]
+            },
+            {
+              "path": "/playgrounds/proTable/useTreeFilter",
+              "name": "useTreeFilter",
+              "component": "/playgrounds/proTable/useTreeFilter/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "使用 TreeFilter",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/proTable/useTreeFilter/detail/:id",
+              "name": "useTreeFilterDetail",
+              "component": "/playgrounds/proTable/useTreeFilter/detail",
+              "meta": {
+                "icon": "Menu",
+                "title": "TreeFilter 详情",
+                "activeMenu": "/proTable/useTreeFilter",
+                "isLink": "",
+                "isHide": true,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/proTable/useSelectFilter",
+              "name": "useSelectFilter",
+              "component": "/playgrounds/proTable/useSelectFilter/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "使用 SelectFilter",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/proTable/treeProTable",
+              "name": "treeProTable",
+              "component": "/playgrounds/proTable/treeProTable/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "树形 ProTable",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/proTable/complexProTable",
+              "name": "complexProTable",
+              "component": "/playgrounds/proTable/complexProTable/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "复杂 ProTable",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/proTable/document",
+              "name": "proTableDocument",
+              "component": "/playgrounds/proTable/document/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "ProTable 文档",
+                "isLink": "https://juejin.cn/post/7166068828202336263/#heading-14",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            }
+          ]
+        },
+        {
+          "path": "/playgrounds/auth",
+          "name": "auth",
+          "redirect": "/playgrounds/auth/menu",
+          "meta": {
+            "icon": "Lock",
+            "title": "权限管理",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          },
+          "children": [
+            {
+              "path": "/playgrounds/auth/menu",
+              "name": "authMenu",
+              "component": "/playgrounds/auth/menu/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "菜单权限",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/auth/button",
+              "name": "authButton",
+              "component": "/playgrounds/auth/button/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "按钮权限",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            }
+          ]
+        },
+        {
+          "path": "/playgrounds/assembly",
+          "name": "assembly",
+          "redirect": "/playgrounds/assembly/guide",
+          "meta": {
+            "icon": "Briefcase",
+            "title": "常用组件",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          },
+          "children": [
+            {
+              "path": "/playgrounds/assembly/guide",
+              "name": "guide",
+              "component": "/playgrounds/assembly/guide/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "引导页",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/assembly/tabs",
+              "name": "tabs",
+              "component": "/playgrounds/assembly/tabs/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "标签页操作",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              },
+              "children": [
+                {
+                  "path": "/playgrounds/assembly/tabs/detail/:id",
+                  "name": "tabsDetail",
+                  "component": "/playgrounds/assembly/tabs/detail",
+                  "meta": {
+                    "icon": "Menu",
+                    "title": "Tab 详情",
+                    "activeMenu": "/assembly/tabs",
+                    "isLink": "",
+                    "isHide": true,
+                    "isFull": false,
+                    "isAffix": false,
+                    "isKeepAlive": true
+                  }
+                }
+              ]
+            },
+            {
+              "path": "/playgrounds/assembly/selectIcon",
+              "name": "selectIcon",
+              "component": "/playgrounds/assembly/selectIcon/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "图标选择器",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/assembly/selectFilter",
+              "name": "selectFilter",
+              "component": "/playgrounds/assembly/selectFilter/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "分类筛选器",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/assembly/treeFilter",
+              "name": "treeFilter",
+              "component": "/playgrounds/assembly/treeFilter/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "树形筛选器",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/assembly/svgIcon",
+              "name": "svgIcon",
+              "component": "/playgrounds/assembly/svgIcon/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "SVG 图标",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/assembly/uploadFile",
+              "name": "uploadFile",
+              "component": "/playgrounds/assembly/uploadFile/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "文件上传",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/assembly/batchImport",
+              "name": "batchImport",
+              "component": "/playgrounds/assembly/batchImport/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "批量添加数据",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/assembly/wangEditor",
+              "name": "wangEditor",
+              "component": "/playgrounds/assembly/wangEditor/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "富文本编辑器",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/assembly/draggable",
+              "name": "draggable",
+              "component": "/playgrounds/assembly/draggable/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "拖拽组件",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            }
+          ]
+        },
+        {
+          "path": "/playgrounds/dashboard",
+          "name": "dashboard",
+          "redirect": "/playgrounds/dashboard/dataVisualize",
+          "meta": {
+            "icon": "Odometer",
+            "title": "Dashboard",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          },
+          "children": [
+            {
+              "path": "/playgrounds/dashboard/dataVisualize",
+              "name": "dataVisualize",
+              "component": "/playgrounds/dashboard/dataVisualize/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "数据可视化",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            }
+          ]
+        },
+        {
+          "path": "/playgrounds/form",
+          "name": "form",
+          "redirect": "/playgrounds/form/proForm",
+          "meta": {
+            "icon": "Tickets",
+            "title": "表单 Form",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          },
+          "children": [
+            {
+              "path": "/playgrounds/form/proForm",
+              "name": "proForm",
+              "component": "/playgrounds/form/proForm/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "超级 Form",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/form/basicForm",
+              "name": "basicForm",
+              "component": "/playgrounds/form/basicForm/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "基础 Form",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/form/validateForm",
+              "name": "validateForm",
+              "component": "/playgrounds/form/validateForm/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "校验 Form",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/form/dynamicForm",
+              "name": "dynamicForm",
+              "component": "/playgrounds/form/dynamicForm/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "动态 Form",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            }
+          ]
+        },
+        {
+          "path": "/playgrounds/echarts",
+          "name": "echarts",
+          "redirect": "/playgrounds/echarts/waterChart",
+          "meta": {
+            "icon": "TrendCharts",
+            "title": "ECharts",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          },
+          "children": [
+            {
+              "path": "/playgrounds/echarts/waterChart",
+              "name": "waterChart",
+              "component": "/playgrounds/echarts/waterChart/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "水型图",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/echarts/columnChart",
+              "name": "columnChart",
+              "component": "/playgrounds/echarts/columnChart/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "柱状图",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/echarts/lineChart",
+              "name": "lineChart",
+              "component": "/playgrounds/echarts/lineChart/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "折线图",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/echarts/pieChart",
+              "name": "pieChart",
+              "component": "/playgrounds/echarts/pieChart/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "饼图",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/echarts/radarChart",
+              "name": "radarChart",
+              "component": "/playgrounds/echarts/radarChart/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "雷达图",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/echarts/nestedChart",
+              "name": "nestedChart",
+              "component": "/playgrounds/echarts/nestedChart/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "嵌套环形图",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            }
+          ]
+        },
+        {
+          "path": "/playgrounds/directives",
+          "name": "directives",
+          "redirect": "/playgrounds/directives/copyDirect",
+          "meta": {
+            "icon": "Stamp",
+            "title": "自定义指令",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          },
+          "children": [
+            {
+              "path": "/playgrounds/directives/copyDirect",
+              "name": "copyDirect",
+              "component": "/playgrounds/directives/copyDirect/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "复制指令",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/directives/watermarkDirect",
+              "name": "watermarkDirect",
+              "component": "/playgrounds/directives/watermarkDirect/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "水印指令",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/directives/dragDirect",
+              "name": "dragDirect",
+              "component": "/playgrounds/directives/dragDirect/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "拖拽指令",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/directives/debounceDirect",
+              "name": "debounceDirect",
+              "component": "/playgrounds/directives/debounceDirect/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "防抖指令",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/directives/throttleDirect",
+              "name": "throttleDirect",
+              "component": "/playgrounds/directives/throttleDirect/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "节流指令",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/directives/longpressDirect",
+              "name": "longpressDirect",
+              "component": "/playgrounds/directives/longpressDirect/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "长按指令",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            }
+          ]
+        },
+        {
+          "path": "/playgrounds/menu",
+          "name": "menu",
+          "redirect": "/playgrounds/menu/menu1",
+          "meta": {
+            "icon": "List",
+            "title": "菜单嵌套",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          },
+          "children": [
+            {
+              "path": "/playgrounds/menu/menu1",
+              "name": "menu1",
+              "component": "/playgrounds/menu/menu1/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "菜单1",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/menu/menu2",
+              "name": "menu2",
+              "redirect": "/playgrounds/menu/menu2/menu21",
+              "meta": {
+                "icon": "Menu",
+                "title": "菜单2",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              },
+              "children": [
+                {
+                  "path": "/playgrounds/menu/menu2/menu21",
+                  "name": "menu21",
+                  "component": "/playgrounds/menu/menu2/menu21/index",
+                  "meta": {
+                    "icon": "Menu",
+                    "title": "菜单2-1",
+                    "isLink": "",
+                    "isHide": false,
+                    "isFull": false,
+                    "isAffix": false,
+                    "isKeepAlive": true
+                  }
+                },
+                {
+                  "path": "/playgrounds/menu/menu2/menu22",
+                  "name": "menu22",
+                  "redirect": "/playgrounds/menu/menu2/menu22/menu221",
+                  "meta": {
+                    "icon": "Menu",
+                    "title": "菜单2-2",
+                    "isLink": "",
+                    "isHide": false,
+                    "isFull": false,
+                    "isAffix": false,
+                    "isKeepAlive": true
+                  },
+                  "children": [
+                    {
+                      "path": "/playgrounds/menu/menu2/menu22/menu221",
+                      "name": "menu221",
+                      "component": "/playgrounds/menu/menu2/menu22/menu221/index",
+                      "meta": {
+                        "icon": "Menu",
+                        "title": "菜单2-2-1",
+                        "isLink": "",
+                        "isHide": false,
+                        "isFull": false,
+                        "isAffix": false,
+                        "isKeepAlive": true
+                      }
+                    },
+                    {
+                      "path": "/playgrounds/menu/menu2/menu22/menu222",
+                      "name": "menu222",
+                      "component": "/playgrounds/menu/menu2/menu22/menu222/index",
+                      "meta": {
+                        "icon": "Menu",
+                        "title": "菜单2-2-2",
+                        "isLink": "",
+                        "isHide": false,
+                        "isFull": false,
+                        "isAffix": false,
+                        "isKeepAlive": true
+                      }
+                    }
+                  ]
+                },
+                {
+                  "path": "/playgrounds/menu/menu2/menu23",
+                  "name": "menu23",
+                  "component": "/playgrounds/menu/menu2/menu23/index",
+                  "meta": {
+                    "icon": "Menu",
+                    "title": "菜单2-3",
+                    "isLink": "",
+                    "isHide": false,
+                    "isFull": false,
+                    "isAffix": false,
+                    "isKeepAlive": true
+                  }
+                }
+              ]
+            },
+            {
+              "path": "/playgrounds/menu/menu3",
+              "name": "menu3",
+              "component": "/playgrounds/menu/menu3/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "菜单3",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            }
+          ]
+        },
+        {
+          "path": "/playgrounds/system",
+          "name": "system",
+          "redirect": "/playgrounds/system/accountManage",
+          "meta": {
+            "icon": "Tools",
+            "title": "系统管理",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          },
+          "children": [
+            {
+              "path": "/playgrounds/system/accountManage",
+              "name": "accountManage",
+              "component": "/playgrounds/system/accountManage/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "账号管理",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/system/roleManage",
+              "name": "roleManage",
+              "component": "/playgrounds/system/roleManage/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "角色管理",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/system/menuMange",
+              "name": "menuMange",
+              "component": "/playgrounds/system/menuMange/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "菜单管理",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/system/departmentManage",
+              "name": "departmentManage",
+              "component": "/playgrounds/system/departmentManage/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "部门管理",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/system/dictManage",
+              "name": "dictManage",
+              "component": "/playgrounds/system/dictManage/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "字典管理",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/system/timingTask",
+              "name": "timingTask",
+              "component": "/playgrounds/system/timingTask/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "定时任务",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/system/systemLog",
+              "name": "systemLog",
+              "component": "/playgrounds/system/systemLog/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "系统日志",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            }
+          ]
+        },
+        {
+          "path": "/playgrounds/link",
+          "name": "link",
+          "redirect": "/playgrounds/link/bing",
+          "meta": {
+            "icon": "Paperclip",
+            "title": "外部链接",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          },
+          "children": [
+            {
+              "path": "/playgrounds/link/bing",
+              "name": "bing",
+              "component": "/playgrounds/link/bing/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "Bing 内嵌",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/link/gitee",
+              "name": "gitee",
+              "component": "/playgrounds/link/gitee/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "Gitee 仓库",
+                "isLink": "https://gitee.com/HalseySpicy/Geeker-Admin",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/link/github",
+              "name": "github",
+              "component": "/playgrounds/link/github/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "GitHub 仓库",
+                "isLink": "https://github.com/HalseySpicy/Geeker-Admin",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/link/docs",
+              "name": "docs",
+              "component": "/playgrounds/link/docs/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "项目文档",
+                "isLink": "https://docs.spicyboy.cn",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/playgrounds/link/juejin",
+              "name": "juejin",
+              "component": "/playgrounds/link/juejin/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "掘金主页",
+                "isLink": "https://juejin.cn/user/3263814531551816/posts",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            }
+          ]
+        },
+        {
+          "path": "/playgrounds/about/index",
+          "name": "about",
+          "component": "/playgrounds/about/index",
+          "meta": {
+            "icon": "InfoFilled",
+            "title": "关于项目",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          }
+        }
+      ]
+    }
+  ],
+  "msg": "成功"
+}

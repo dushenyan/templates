@@ -1,0 +1,423 @@
+/* Mac Style Global Styles for Arco Design */
+:root {
+  /* Mac design system colors */
+  --mac-blue: #007AFF;
+  --mac-dark-blue: #0A84FF;
+  --mac-purple: #5856D6;
+  --mac-dark-purple: #5E5CE6;
+  --mac-red: #FF3B30;
+  --mac-dark-red: #FF453A;
+  --mac-orange: #FF9500;
+  --mac-dark-orange: #FF9F0A;
+  --mac-green: #34C759;
+  --mac-dark-green: #30D158;
+  --mac-cyan: #5AC8FA;
+  --mac-dark-cyan: #64D2FF;
+  --mac-gray: #8E8E93;
+  --mac-light-gray: #C7C7CC;
+  --mac-extra-light-gray: #F2F2F7;
+  --mac-dark-surface: #1C1C1E;
+  --mac-dark-surface-variant: #2C2C2E;
+  
+  /* Mac typography */
+  --mac-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --mac-font-size-base: 14px;
+  --mac-font-size-large: 16px;
+  --mac-font-size-small: 12px;
+  
+  /* Mac spacing */
+  --mac-spacing-xs: 4px;
+  --mac-spacing-sm: 8px;
+  --mac-spacing-md: 16px;
+  --mac-spacing-lg: 24px;
+  --mac-spacing-xl: 32px;
+  
+  /* Mac border radius */
+  --mac-border-radius-sm: 6px;
+  --mac-border-radius-md: 8px;
+  --mac-border-radius-lg: 12px;
+  --mac-border-radius-xl: 16px;
+  
+  /* Mac shadows */
+  --mac-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --mac-shadow-md: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  --mac-shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* Global font and base styles */
+* {
+  font-family: var(--mac-font-family);
+}
+
+/* Smooth transitions for theme switching */
+body {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Arco Design dark theme support */
+.arco-theme-dark {
+  color-scheme: dark;
+}
+
+/* Force dark theme styles for all Arco components in dark mode */
+.arco-theme-dark .arco-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arco-theme-dark .arco-card {
+  background-color: var(--color-bg-container);
+  border-color: var(--color-border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arco-theme-dark .arco-select-popup {
+  background-color: var(--color-bg-elevated);
+  border-color: var(--color-border);
+}
+
+/* Enhanced button styles for Mac look with Arco Design */
+.arco-btn {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: var(--mac-border-radius-lg);
+}
+
+.arco-btn.arco-btn-primary {
+  background: linear-gradient(135deg, var(--mac-blue) 0%, var(--mac-purple) 100%);
+  border: none;
+  box-shadow: var(--mac-shadow-sm);
+}
+
+.arco-btn.arco-btn-primary:hover {
+  background: linear-gradient(135deg, var(--mac-dark-blue) 0%, var(--mac-dark-purple) 100%);
+  box-shadow: var(--mac-shadow-md);
+  transform: translateY(-1px);
+}
+
+.arco-btn.arco-btn-outline {
+  border-color: var(--mac-purple);
+  color: var(--mac-purple);
+}
+
+.arco-btn.arco-btn-outline:hover {
+  border-color: var(--mac-blue);
+  color: var(--mac-blue);
+  box-shadow: 0 4px 12px rgba(88, 86, 214, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Card styles with Arco Design */
+.arco-card {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--mac-border-radius-xl);
+  box-shadow: var(--mac-shadow-sm);
+}
+
+@media (prefers-color-scheme: dark) {
+  .arco-card {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(30, 30, 30, 0.8);
+  }
+}
+
+/* Header styles with Arco Design */
+.arco-layout-header {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .arco-layout-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Form field styles with Arco Design */
+.arco-input-wrapper,
+.arco-select-view {
+  border-radius: var(--mac-border-radius-md) !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arco-input-wrapper:hover,
+.arco-select-view:hover {
+  border-color: var(--mac-blue);
+}
+
+.arco-input-wrapper.arco-input-focus,
+.arco-select-view.arco-select-view-focus {
+  border-color: var(--mac-blue);
+  box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .arco-input-wrapper.arco-input-focus,
+  .arco-select-view.arco-select-view-focus {
+    border-color: var(--mac-dark-blue);
+    box-shadow: 0 0 0 2px rgba(10, 132, 255, 0.2);
+  }
+}
+
+/* Tag/Chip styles with Arco Design */
+.arco-tag {
+  font-weight: 500;
+  border-radius: var(--mac-border-radius-lg);
+}
+
+/* Tooltip styles with Arco Design */
+.arco-tooltip {
+  border-radius: var(--mac-border-radius-md);
+  font-size: var(--mac-font-size-small);
+  font-weight: 400;
+}
+
+/* Badge styles with Arco Design */
+.arco-badge {
+  border-radius: var(--mac-border-radius-lg);
+  font-weight: 600;
+  font-size: 11px;
+}
+
+/* Icon styles with Arco Design */
+.arco-icon {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arco-btn:hover .arco-icon {
+  transform: scale(1.1);
+}
+
+/* Container spacing adjustments */
+.mac-container {
+  padding-top: var(--mac-spacing-lg);
+  padding-bottom: var(--mac-spacing-lg);
+}
+
+/* Row spacing */
+.arco-row + .arco-row {
+  margin-top: var(--mac-spacing-md);
+}
+
+/* Mac-style focus states */
+.arco-btn:focus-visible,
+.arco-input-wrapper:focus-within,
+.arco-select-view:focus-within {
+  outline: 2px solid var(--mac-blue);
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .arco-btn:focus-visible,
+  .arco-input-wrapper:focus-within,
+  .arco-select-view:focus-within {
+    outline-color: var(--mac-dark-blue);
+  }
+}
+
+/* Select dropdown styles */
+.arco-select-popup {
+  border-radius: var(--mac-border-radius-lg);
+  box-shadow: var(--mac-shadow-lg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Date picker styles */
+.arco-picker {
+  border-radius: var(--mac-border-radius-md);
+}
+
+/* Result page styles */
+.arco-result {
+  border-radius: var(--mac-border-radius-xl);
+}
+
+/* Scrollbar styling for Mac */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Mac-style animations */
+@keyframes mac-bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+.mac-bounce {
+  animation: mac-bounce 1s ease-in-out;
+}
+
+/* 暗色主题全局样式 */
+.arco-theme-dark body {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+.arco-theme-dark .arco-app {
+  background-color: #000000;
+}
+
+.arco-theme-dark .mac-title {
+  color: #FFFFFF !important;
+}
+
+.arco-theme-dark .mac-description {
+  color: #E0E0E0 !important;
+}
+
+.arco-theme-dark .version-info {
+  color: #AAAAAA !important;
+}
+
+.arco-theme-dark .selected-file-info {
+  color: #AAAAAA !important;
+}
+
+/* 暗色主题下的按钮样式 */
+.arco-theme-dark .arco-btn-outline {
+  border-color: #5E5CE6 !important;
+  color: #5E5CE6 !important;
+  background-color: rgba(94, 92, 230, 0.1) !important;
+}
+
+.arco-theme-dark .arco-btn-outline:hover {
+  border-color: #0A84FF !important;
+  color: #0A84FF !important;
+  background-color: rgba(10, 132, 255, 0.2) !important;
+}
+
+/* 暗色主题下的卡片样式 */
+.arco-theme-dark .arco-card {
+  background-color: rgba(30, 30, 30, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+}
+
+/* 暗色主题下的选择器样式 */
+.arco-theme-dark .arco-select-view {
+  background-color: #1C1C1E !important;
+  border-color: #2C2C2E !important;
+  color: #FFFFFF !important;
+}
+
+.arco-theme-dark .arco-select-popup {
+  background-color: #1C1C1E !important;
+  border-color: #2C2C2E !important;
+}
+
+.arco-theme-dark .arco-select-option {
+  background-color: #1C1C1E !important;
+  color: #FFFFFF !important;
+}
+
+.arco-theme-dark .arco-select-option:hover {
+  background-color: #2C2C2E !important;
+}
+
+/* 暗色主题下的标签样式 */
+.arco-theme-dark .arco-tag {
+  background-color: rgba(10, 132, 255, 0.2) !important;
+  border-color: #0A84FF !important;
+  color: #0A84FF !important;
+}
+
+/* 暗色主题下的结果页面 */
+.arco-theme-dark .arco-result {
+  background-color: #1C1C1E !important;
+  color: #FFFFFF !important;
+}
+
+/* 暗色主题下的日期选择器 */
+.arco-theme-dark .arco-picker {
+  background-color: #1C1C1E !important;
+  border-color: #2C2C2E !important;
+  color: #FFFFFF !important;
+}
+
+/* 暗色主题下的分割线 */
+.arco-theme-dark .arco-divider {
+  border-color: #2C2C2E !important;
+}
+
+/* 暗色主题下的导航栏 */
+.arco-theme-dark .mac-header {
+  background: linear-gradient(135deg, #0A84FF 0%, #5E5CE6 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* 暗色主题下的主内容区域 */
+.arco-theme-dark .arco-main {
+  background-color: #000000;
+}
+
+/* 暗色主题下的输入框 */
+.arco-theme-dark .arco-input-wrapper {
+  background-color: #1C1C1E !important;
+  border-color: #2C2C2E !important;
+  color: #FFFFFF !important;
+}
+
+.arco-theme-dark .arco-input-wrapper:hover {
+  border-color: #0A84FF !important;
+}
+
+.arco-theme-dark .arco-input-wrapper.arco-input-focus {
+  border-color: #0A84FF !important;
+  box-shadow: 0 0 0 2px rgba(10, 132, 255, 0.2) !important;
+}
+
+/* 暗色主题下的滚动条 */
+.arco-theme-dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.arco-theme-dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mac-container {
+    padding-left: var(--mac-spacing-md);
+    padding-right: var(--mac-spacing-md);
+  }
+}

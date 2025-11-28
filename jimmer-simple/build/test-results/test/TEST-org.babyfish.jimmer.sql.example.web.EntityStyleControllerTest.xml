@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.babyfish.jimmer.sql.example.web.EntityStyleControllerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-11-06T08:17:46.438Z" hostname="shenyandeMac-mini.local" time="0.078">
+  <properties/>
+  <testcase name="testFindRecursiveRootTreeNodes()" classname="org.babyfish.jimmer.sql.example.web.EntityStyleControllerTest" time="0.032"/>
+  <testcase name="testFindComplexBooks()" classname="org.babyfish.jimmer.sql.example.web.EntityStyleControllerTest" time="0.035"/>
+  <testcase name="testFindSimpleBooks()" classname="org.babyfish.jimmer.sql.example.web.EntityStyleControllerTest" time="0.004"/>
+  <testcase name="testFindSimpleRootTreeNodes()" classname="org.babyfish.jimmer.sql.example.web.EntityStyleControllerTest" time="0.004"/>
+  <system-out><![CDATA[2025-11-06T16:17:46.435+08:00  INFO 92083 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.babyfish.jimmer.sql.example.web.EntityStyleControllerTest]: EntityStyleControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-06T16:17:46.437+08:00  INFO 92083 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.babyfish.jimmer.sql.example.App for test class org.babyfish.jimmer.sql.example.web.EntityStyleControllerTest
+2025-11-06T16:17:46.441+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===>
+Purpose: QUERY
+SQL: select
+    tb_1_.ID,
+    tb_1_.NAME
+from TREE_NODE tb_1_
+where
+    tb_1_.PARENT_ID is null
+JDBC response status: success
+Time cost: 0ms
+<===Execute SQL
+2025-11-06T16:17:46.442+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===>
+Purpose: LOAD
+SQL: select
+    tb_1_.ID,
+    tb_1_.NAME
+from TREE_NODE tb_1_
+where
+    tb_1_.PARENT_ID = ? /* 1 */
+order by
+    tb_1_.NAME asc
+JDBC response status: success
+Time cost: 0ms
+<===Execute SQL
+2025-11-06T16:17:46.443+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===>
+Purpose: LOAD
+SQL: select
+    tb_1_.PARENT_ID,
+    tb_1_.ID,
+    tb_1_.NAME
+from TREE_NODE tb_1_
+where
+    tb_1_.PARENT_ID = any(? /* [9, 2] */)
+order by
+    tb_1_.NAME asc
+JDBC response status: success
+Time cost: 0ms
+<===Execute SQL
+2025-11-06T16:17:46.444+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===>
+Purpose: LOAD
+SQL: select
+    tb_1_.PARENT_ID,
+    tb_1_.ID,
+    tb_1_.NAME
+from TREE_NODE tb_1_
+where
+    tb_1_.PARENT_ID = any(? /* [18, 10, 6, 3] */)
+order by
+    tb_1_.NAME asc
+JDBC response status: success
+Time cost: 0ms
+<===Execute SQL
+2025-11-06T16:17:46.445+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===>
+Purpose: LOAD
+SQL: select
+    tb_1_.PARENT_ID,
+    tb_1_.ID,
+    tb_1_.NAME
+from TREE_NODE tb_1_
+where
+    tb_1_.PARENT_ID = any(? /* [19, 22, 11, 15, 7, 8, 4, 5] */)
+order by
+    tb_1_.NAME asc
+JDBC response status: success
+Time cost: 0ms
+<===Execute SQL
+2025-11-06T16:17:46.447+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===>
+Purpose: LOAD
+SQL: select
+    tb_1_.PARENT_ID,
+    tb_1_.ID,
+    tb_1_.NAME
+from TREE_NODE tb_1_
+where
+    tb_1_.PARENT_ID = any(? /* [20, 21, 24, 23, 12, 14, 13, 17, 16] */)
+order by
+    tb_1_.NAME asc
+JDBC response status: success
+Time cost: 0ms
+<===Execute SQL
+2025-11-06T16:17:46.474+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===>
+Purpose: QUERY
+SQL: select
+    tb_1_.ID,
+    tb_1_.NAME,
+    tb_1_.EDITION,
+    tb_1_.PRICE,
+    tb_1_.STORE_ID
+from BOOK tb_1_
+where
+    tb_1_.NAME = ? /* GraphQL in Action */
+JDBC response status: success
+Time cost: 0ms
+<===Execute SQL
+2025-11-06T16:17:46.475+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===>
+Purpose: LOAD
+SQL: select
+    tb_1_.ID,
+    tb_1_.NAME,
+    tb_1_.WEBSITE
+from BOOK_STORE tb_1_
+where
+    tb_1_.ID = ? /* 2 */
+JDBC response status: success
+Time cost: 0ms
+<===Execute SQL
+2025-11-06T16:17:46.476+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===>
+Purpose: LOAD
+SQL: select
+    tb_2_.BOOK_ID,
+    tb_1_.ID,
+    tb_1_.FIRST_NAME,
+    tb_1_.LAST_NAME,
+    tb_1_.GENDER
+from AUTHOR tb_1_
+inner join BOOK_AUTHOR_MAPPING tb_2_
+    on tb_1_.ID = tb_2_.AUTHOR_ID
+where
+    tb_2_.BOOK_ID = any(? /* [10, 11, 12] */)
+order by
+    tb_1_.FIRST_NAME asc,
+    tb_1_.LAST_NAME asc
+JDBC response status: success
+Time cost: 0ms
+<===Execute SQL
+2025-11-06T16:17:46.510+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===>
+Purpose: QUERY
+SQL: select
+    tb_1_.ID,
+    tb_1_.NAME
+from BOOK tb_1_
+where
+    tb_1_.NAME = ? /* GraphQL in Action */
+JDBC response status: success
+Time cost: 0ms
+<===Execute SQL
+2025-11-06T16:17:46.515+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===>
+Purpose: QUERY
+SQL: select
+    tb_1_.ID,
+    tb_1_.NAME
+from TREE_NODE tb_1_
+where
+    tb_1_.PARENT_ID is null
+JDBC response status: success
+Time cost: 1ms
+<===Execute SQL
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

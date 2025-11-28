@@ -1,0 +1,547 @@
+{
+  "services" : [ {
+    "typeName" : "org.babyfish.jimmer.sql.example.web.DtoStyleController",
+    "operations" : [ {
+      "name" : "findSimpleBooks",
+      "key" : "findSimpleBooks:java.lang.String",
+      "doc" : {
+        "value" : "查询简单的图书对象。\n\n<p>如果指定了此参数，则仅查询名称与指定名称匹配的图书。</p>\n",
+        "parameters" : {
+          "name" : "可选查询参数，\n     {@code null} 或 {@code \"\"} 将被忽略"
+        },
+        "return" : "图书对象列表，每个对象仅包含 {@code id} 和 {@code name} 属性"
+      },
+      "parameters" : [ {
+        "name" : "name",
+        "type" : {
+          "typeName" : "java.lang.String",
+          "nullable" : true
+        },
+        "index" : 0
+      } ],
+      "returnType" : {
+        "typeName" : "java.util.List",
+        "arguments" : [ {
+          "typeName" : "org.babyfish.jimmer.sql.example.model.dto.SimpleBookView"
+        } ]
+      }
+    }, {
+      "name" : "findComplexBooks",
+      "key" : "findComplexBooks:java.lang.String",
+      "doc" : {
+        "value" : "查询复杂的图书对象。\n\n<p>如果指定了此参数，则仅查询名称与指定名称匹配的图书。</p>\n",
+        "parameters" : {
+          "name" : "可选查询参数，\n     {@code null} 或 {@code \"\"} 将被忽略"
+        },
+        "return" : "图书对象列表，每个对象包含所有标量属性、关联的\n     {@link BookStore} 和关联的 {@link Author} 对象。"
+      },
+      "parameters" : [ {
+        "name" : "name",
+        "type" : {
+          "typeName" : "java.lang.String",
+          "nullable" : true
+        },
+        "index" : 0
+      } ],
+      "returnType" : {
+        "typeName" : "java.util.List",
+        "arguments" : [ {
+          "typeName" : "org.babyfish.jimmer.sql.example.model.dto.ComplexBookView"
+        } ]
+      }
+    }, {
+      "name" : "findSimpleTreeNodes",
+      "key" : "findSimpleTreeNodes",
+      "doc" : {
+        "value" : "查询根树节点，即 parentId 为 null 的节点。\n",
+        "return" : "所有根树节点的列表，每个节点仅包含 {@code id} 和 {@code name} 属性"
+      },
+      "returnType" : {
+        "typeName" : "java.util.List",
+        "arguments" : [ {
+          "typeName" : "org.babyfish.jimmer.sql.example.model.dto.SimpleTreeNodeView"
+        } ]
+      }
+    }, {
+      "name" : "findRecursiveTreeNodes",
+      "key" : "findRecursiveTreeNodes",
+      "doc" : {
+        "value" : "查询根树节点，即 parentId 为 null 的节点。\n",
+        "return" : "所有根树节点的列表，每个节点包含所有标量属性和关联的子对象。\n        如果子节点有更深层次的子节点，将递归关联直到没有更深层次的子节点为止。"
+      },
+      "returnType" : {
+        "typeName" : "java.util.List",
+        "arguments" : [ {
+          "typeName" : "org.babyfish.jimmer.sql.example.model.dto.RecursiveTreeNodeView"
+        } ]
+      }
+    } ]
+  }, {
+    "typeName" : "org.babyfish.jimmer.sql.example.web.EntityStyleController",
+    "operations" : [ {
+      "name" : "findSimpleBooks",
+      "key" : "findSimpleBooks:java.lang.String",
+      "doc" : {
+        "value" : "查询简单的图书对象。\n\n<p>如果指定了此参数，则仅查询名称与指定名称匹配的图书。</p>\n",
+        "parameters" : {
+          "name" : "可选查询参数，\n     {@code null} 或 {@code \"\"} 将被忽略"
+        },
+        "return" : "图书对象列表，每个对象仅包含 {@code id} 和 {@code name} 属性"
+      },
+      "parameters" : [ {
+        "name" : "name",
+        "type" : {
+          "typeName" : "java.lang.String",
+          "nullable" : true
+        },
+        "index" : 0
+      } ],
+      "returnType" : {
+        "typeName" : "java.util.List",
+        "arguments" : [ {
+          "typeName" : "org.babyfish.jimmer.sql.example.model.Book",
+          "fetchBy" : "SIMPLE_BOOK",
+          "fetcherOwner" : "org.babyfish.jimmer.sql.example.web.EntityStyleController",
+          "fetcherDoc" : {
+            "value" : "由 ObjectFetcher 定义的简单图书 DTO"
+          }
+        } ]
+      }
+    }, {
+      "name" : "findComplexBooks",
+      "key" : "findComplexBooks:java.lang.String",
+      "doc" : {
+        "value" : "查询复杂的图书对象。\n\n<p>如果指定了此参数，则仅查询名称与指定名称匹配的图书。</p>\n",
+        "parameters" : {
+          "name" : "可选查询参数，\n     {@code null} 或 {@code \"\"} 将被忽略"
+        },
+        "return" : "图书对象列表，每个对象包含所有标量属性、关联的\n     {@link BookStore} 和关联的 {@link Author} 对象。"
+      },
+      "parameters" : [ {
+        "name" : "name",
+        "type" : {
+          "typeName" : "java.lang.String",
+          "nullable" : true
+        },
+        "index" : 0
+      } ],
+      "returnType" : {
+        "typeName" : "java.util.List",
+        "arguments" : [ {
+          "typeName" : "org.babyfish.jimmer.sql.example.model.Book",
+          "fetchBy" : "COMPLEX_BOOK",
+          "fetcherOwner" : "org.babyfish.jimmer.sql.example.web.EntityStyleController",
+          "fetcherDoc" : {
+            "value" : "由 ObjectFetcher 定义的复杂图书 DTO"
+          }
+        } ]
+      }
+    }, {
+      "name" : "findSimpleTreeNodes",
+      "key" : "findSimpleTreeNodes",
+      "doc" : {
+        "value" : "查询根树节点，即 parentId 为 null 的节点。\n",
+        "return" : "所有根树节点的列表，每个节点仅包含 {@code id} 和 {@code name} 属性"
+      },
+      "returnType" : {
+        "typeName" : "java.util.List",
+        "arguments" : [ {
+          "typeName" : "org.babyfish.jimmer.sql.example.model.TreeNode",
+          "fetchBy" : "SIMPLE_TREE_NODE",
+          "fetcherOwner" : "org.babyfish.jimmer.sql.example.web.EntityStyleController",
+          "fetcherDoc" : {
+            "value" : "由 ObjectFetcher 定义的简单树节点 DTO"
+          }
+        } ]
+      }
+    }, {
+      "name" : "findRecursiveTreeNodes",
+      "key" : "findRecursiveTreeNodes",
+      "doc" : {
+        "value" : "查询根树节点，即 parentId 为 null 的节点。\n",
+        "return" : "所有根树节点的列表，每个节点包含所有标量属性和关联的子对象。\n        如果子节点有更深层次的子节点，将递归关联直到没有更深层次的子节点为止。"
+      },
+      "returnType" : {
+        "typeName" : "java.util.List",
+        "arguments" : [ {
+          "typeName" : "org.babyfish.jimmer.sql.example.model.TreeNode",
+          "fetchBy" : "RECURSIVE_TREE_NODE",
+          "fetcherOwner" : "org.babyfish.jimmer.sql.example.web.EntityStyleController",
+          "fetcherDoc" : {
+            "value" : "由 ObjectFetcher 定义的递归树节点"
+          }
+        } ]
+      }
+    } ]
+  } ],
+  "definitions" : [ {
+    "typeName" : "org.babyfish.jimmer.sql.example.model.Author",
+    "kind" : "IMMUTABLE",
+    "props" : [ {
+      "name" : "id",
+      "type" : {
+        "typeName" : "long"
+      },
+      "doc" : {
+        "value" : "The surrogate id of the current object,\nauto-incrementing,\nwithout specific business meaning"
+      }
+    }, {
+      "name" : "firstName",
+      "type" : {
+        "typeName" : "java.lang.String"
+      },
+      "doc" : {
+        "value" : "The first name of current Author.\n\n<p>This property forms a unique constraint together with\nthe {@code lastName} property, which is {@code @Key} of Jimmer</p>"
+      }
+    }, {
+      "name" : "lastName",
+      "type" : {
+        "typeName" : "java.lang.String"
+      },
+      "doc" : {
+        "value" : "The last name of current Book.\n\n<p>This property forms a unique constraint together with\nthe {@code firstName} property, which is {@code @Key} of Jimmer</p>"
+      }
+    }, {
+      "name" : "gender",
+      "type" : {
+        "typeName" : "org.babyfish.jimmer.sql.example.model.Gender"
+      }
+    }, {
+      "name" : "books",
+      "type" : {
+        "typeName" : "java.util.List",
+        "arguments" : [ {
+          "typeName" : "org.babyfish.jimmer.sql.example.model.Book"
+        } ]
+      }
+    } ]
+  }, {
+    "typeName" : "org.babyfish.jimmer.sql.example.model.Book",
+    "kind" : "IMMUTABLE",
+    "props" : [ {
+      "name" : "id",
+      "type" : {
+        "typeName" : "long"
+      },
+      "doc" : {
+        "value" : "The surrogate id of the current object,\nauto-incrementing,\nwithout specific business meaning"
+      }
+    }, {
+      "name" : "name",
+      "type" : {
+        "typeName" : "java.lang.String"
+      },
+      "doc" : {
+        "value" : "The name of current Book.\n\n<p>This property forms a unique constraint together with\nthe {@code edition} property, which is {@code @Key} of Jimmer</p>"
+      }
+    }, {
+      "name" : "edition",
+      "type" : {
+        "typeName" : "int"
+      },
+      "doc" : {
+        "value" : "The edition of current Book.\n\n<p>This property forms a unique constraint together with\nthe {@code name} property, which is {@code @Key} of Jimmer</p>"
+      }
+    }, {
+      "name" : "price",
+      "type" : {
+        "typeName" : "java.math.BigDecimal"
+      }
+    }, {
+      "name" : "store",
+      "type" : {
+        "typeName" : "org.babyfish.jimmer.sql.example.model.BookStore",
+        "nullable" : true
+      },
+      "doc" : {
+        "value" : "The bookstore to which the current book belongs,\nrepresenting a many-to-one association"
+      }
+    }, {
+      "name" : "authors",
+      "type" : {
+        "typeName" : "java.util.List",
+        "arguments" : [ {
+          "typeName" : "org.babyfish.jimmer.sql.example.model.Author"
+        } ]
+      },
+      "doc" : {
+        "value" : "All authors who participated in writing\nthe current book,\nrepresenting a many-to-many association"
+      }
+    } ]
+  }, {
+    "typeName" : "org.babyfish.jimmer.sql.example.model.BookStore",
+    "kind" : "IMMUTABLE",
+    "props" : [ {
+      "name" : "id",
+      "type" : {
+        "typeName" : "long"
+      },
+      "doc" : {
+        "value" : "The surrogate id of the current object,\nauto-incrementing,\nwithout specific business meaning"
+      }
+    }, {
+      "name" : "name",
+      "type" : {
+        "typeName" : "java.lang.String"
+      },
+      "doc" : {
+        "value" : "The name of current BookStore.\n\n<p>This property forms a unique constraint,\nwhich is {@code @Key} of Jimmer</p>"
+      }
+    }, {
+      "name" : "website",
+      "type" : {
+        "typeName" : "java.lang.String",
+        "nullable" : true
+      }
+    }, {
+      "name" : "books",
+      "type" : {
+        "typeName" : "java.util.List",
+        "arguments" : [ {
+          "typeName" : "org.babyfish.jimmer.sql.example.model.Book"
+        } ]
+      },
+      "doc" : {
+        "value" : "All books belonging to the current bookstore,\nrepresenting a one-to-many association"
+      }
+    } ]
+  }, {
+    "typeName" : "org.babyfish.jimmer.sql.example.model.Gender",
+    "kind" : "ENUM",
+    "constants" : [ {
+      "name" : "MALE"
+    }, {
+      "name" : "FEMALE"
+    } ]
+  }, {
+    "typeName" : "org.babyfish.jimmer.sql.example.model.TreeNode",
+    "kind" : "IMMUTABLE",
+    "props" : [ {
+      "name" : "id",
+      "type" : {
+        "typeName" : "long"
+      },
+      "doc" : {
+        "value" : "The surrogate id of the current object,\nauto-incrementing,\nwithout specific business meaning"
+      }
+    }, {
+      "name" : "name",
+      "type" : {
+        "typeName" : "java.lang.String"
+      },
+      "doc" : {
+        "value" : "The name of current TreeNode.\n\n<p>This property forms a unique constraint,\nwhich is {@code @Key} of Jimmer</p>"
+      }
+    }, {
+      "name" : "parent",
+      "type" : {
+        "typeName" : "org.babyfish.jimmer.sql.example.model.TreeNode",
+        "nullable" : true
+      },
+      "doc" : {
+        "value" : "The parent node of the current TreeNode.\nThe type of the associated object is the\nsame as the current object type, so it\nis a self-associated property that can\nbe queried recursively."
+      }
+    }, {
+      "name" : "childNodes",
+      "type" : {
+        "typeName" : "java.util.List",
+        "arguments" : [ {
+          "typeName" : "org.babyfish.jimmer.sql.example.model.TreeNode"
+        } ]
+      },
+      "doc" : {
+        "value" : "The child nodes of the current TreeNode.\nThe type of the associated object is the\nsame as the current object type, so it\nis a self-associated property that can\nbe queried recursively."
+      }
+    } ]
+  }, {
+    "typeName" : "org.babyfish.jimmer.sql.example.model.dto.ComplexBookView",
+    "doc" : {
+      "value" : "Complex Book DTO defined by DTO Language"
+    },
+    "props" : [ {
+      "name" : "id",
+      "type" : {
+        "typeName" : "long"
+      },
+      "doc" : {
+        "value" : "The surrogate id of the current object,\nauto-incrementing,\nwithout specific business meaning"
+      }
+    }, {
+      "name" : "name",
+      "type" : {
+        "typeName" : "java.lang.String"
+      },
+      "doc" : {
+        "value" : "The name of current Book.\n\n<p>This property forms a unique constraint together with\nthe {@code edition} property, which is {@code @Key} of Jimmer</p>"
+      }
+    }, {
+      "name" : "edition",
+      "type" : {
+        "typeName" : "int"
+      },
+      "doc" : {
+        "value" : "The edition of current Book.\n\n<p>This property forms a unique constraint together with\nthe {@code name} property, which is {@code @Key} of Jimmer</p>"
+      }
+    }, {
+      "name" : "price",
+      "type" : {
+        "typeName" : "java.math.BigDecimal"
+      }
+    }, {
+      "name" : "store",
+      "type" : {
+        "typeName" : "org.babyfish.jimmer.sql.example.model.dto.ComplexBookView$TargetOf_store",
+        "nullable" : true
+      },
+      "doc" : {
+        "value" : "The bookstore to which the current book belongs,\nrepresenting a many-to-one association"
+      }
+    }, {
+      "name" : "authors",
+      "type" : {
+        "typeName" : "java.util.List",
+        "arguments" : [ {
+          "typeName" : "org.babyfish.jimmer.sql.example.model.dto.ComplexBookView$TargetOf_authors"
+        } ]
+      },
+      "doc" : {
+        "value" : "All authors who participated in writing\nthe current book,\nrepresenting a many-to-many association"
+      }
+    } ]
+  }, {
+    "typeName" : "org.babyfish.jimmer.sql.example.model.dto.ComplexBookView$TargetOf_authors",
+    "props" : [ {
+      "name" : "id",
+      "type" : {
+        "typeName" : "long"
+      },
+      "doc" : {
+        "value" : "The surrogate id of the current object,\nauto-incrementing,\nwithout specific business meaning"
+      }
+    }, {
+      "name" : "firstName",
+      "type" : {
+        "typeName" : "java.lang.String"
+      },
+      "doc" : {
+        "value" : "The first name of current Author.\n\n<p>This property forms a unique constraint together with\nthe {@code lastName} property, which is {@code @Key} of Jimmer</p>"
+      }
+    }, {
+      "name" : "lastName",
+      "type" : {
+        "typeName" : "java.lang.String"
+      },
+      "doc" : {
+        "value" : "The last name of current Book.\n\n<p>This property forms a unique constraint together with\nthe {@code firstName} property, which is {@code @Key} of Jimmer</p>"
+      }
+    }, {
+      "name" : "gender",
+      "type" : {
+        "typeName" : "org.babyfish.jimmer.sql.example.model.Gender"
+      }
+    } ]
+  }, {
+    "typeName" : "org.babyfish.jimmer.sql.example.model.dto.ComplexBookView$TargetOf_store",
+    "props" : [ {
+      "name" : "id",
+      "type" : {
+        "typeName" : "long"
+      },
+      "doc" : {
+        "value" : "The surrogate id of the current object,\nauto-incrementing,\nwithout specific business meaning"
+      }
+    }, {
+      "name" : "name",
+      "type" : {
+        "typeName" : "java.lang.String"
+      },
+      "doc" : {
+        "value" : "The name of current BookStore.\n\n<p>This property forms a unique constraint,\nwhich is {@code @Key} of Jimmer</p>"
+      }
+    }, {
+      "name" : "website",
+      "type" : {
+        "typeName" : "java.lang.String",
+        "nullable" : true
+      }
+    } ]
+  }, {
+    "typeName" : "org.babyfish.jimmer.sql.example.model.dto.RecursiveTreeNodeView",
+    "doc" : {
+      "value" : "Recursive TreeNode DTO defined by DTO Language"
+    },
+    "props" : [ {
+      "name" : "id",
+      "type" : {
+        "typeName" : "long"
+      },
+      "doc" : {
+        "value" : "The surrogate id of the current object,\nauto-incrementing,\nwithout specific business meaning"
+      }
+    }, {
+      "name" : "name",
+      "type" : {
+        "typeName" : "java.lang.String"
+      },
+      "doc" : {
+        "value" : "The name of current TreeNode.\n\n<p>This property forms a unique constraint,\nwhich is {@code @Key} of Jimmer</p>"
+      }
+    }, {
+      "name" : "childNodes",
+      "type" : {
+        "typeName" : "java.util.List",
+        "nullable" : true,
+        "arguments" : [ {
+          "typeName" : "org.babyfish.jimmer.sql.example.model.dto.RecursiveTreeNodeView"
+        } ]
+      },
+      "doc" : {
+        "value" : "The child nodes of the current TreeNode.\nThe type of the associated object is the\nsame as the current object type, so it\nis a self-associated property that can\nbe queried recursively."
+      }
+    } ]
+  }, {
+    "typeName" : "org.babyfish.jimmer.sql.example.model.dto.SimpleBookView",
+    "doc" : {
+      "value" : "Simple Book DTO defined by DTO Language"
+    },
+    "props" : [ {
+      "name" : "id",
+      "type" : {
+        "typeName" : "long"
+      },
+      "doc" : {
+        "value" : "The surrogate id of the current object,\nauto-incrementing,\nwithout specific business meaning"
+      }
+    }, {
+      "name" : "name",
+      "type" : {
+        "typeName" : "java.lang.String"
+      },
+      "doc" : {
+        "value" : "The name of current Book.\n\n<p>This property forms a unique constraint together with\nthe {@code edition} property, which is {@code @Key} of Jimmer</p>"
+      }
+    } ]
+  }, {
+    "typeName" : "org.babyfish.jimmer.sql.example.model.dto.SimpleTreeNodeView",
+    "doc" : {
+      "value" : "Simple TreeNode DTO defined by DTO Language"
+    },
+    "props" : [ {
+      "name" : "id",
+      "type" : {
+        "typeName" : "long"
+      },
+      "doc" : {
+        "value" : "The surrogate id of the current object,\nauto-incrementing,\nwithout specific business meaning"
+      }
+    }, {
+      "name" : "name",
+      "type" : {
+        "typeName" : "java.lang.String"
+      },
+      "doc" : {
+        "value" : "The name of current TreeNode.\n\n<p>This property forms a unique constraint,\nwhich is {@code @Key} of Jimmer</p>"
+      }
+    } ]
+  } ]
+}

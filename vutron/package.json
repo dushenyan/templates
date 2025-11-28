@@ -1,0 +1,72 @@
+{
+  "name": "vutron",
+  "appId": "com.vutron.vutron",
+  "type": "commonjs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Quick Start Templates for Vite + Vue 3 + Electron",
+  "author": "CDGet <jooy2.contact@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://vutron.cdget.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jooy2/vutron.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jooy2/vutron/issues"
+  },
+  "main": "dist/main/index.js",
+  "debug": {
+    "env": {
+      "VITE_DEV_SERVER_URL": "http://localhost:5173"
+    }
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:debug": "vite -d",
+    "dev:debug:force": "vite -d --force",
+    "build": "npm run build:pre && electron-builder --config=buildAssets/builder/config.js",
+    "build:pre": "vue-tsc --noEmit && vite build",
+    "build:all": "npm run build:pre && electron-builder --config=buildAssets/builder/config.js -wml",
+    "build:dir": "npm run build:pre && electron-builder --config=buildAssets/builder/config.js --dir",
+    "build:mac": "npm run build:pre && CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --config=buildAssets/builder/config.js --mac",
+    "build:linux": "npm run build:pre && electron-builder --config=buildAssets/builder/config.js --linux",
+    "build:win": "npm run build:pre && electron-builder --config=buildAssets/builder/config.js --windows",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "dependencies": {
+    "@arco-design/web-vue": "^2.57.0",
+    "electron-log": "^5.4.3",
+    "pinia": "^3.0.4",
+    "qsu": "^1.10.4",
+    "vue": "^3.5.25",
+    "vue-i18n": "^11.2.2",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^6.2.0",
+    "@vitejs/plugin-vue": "^6.0.2",
+    "@vitejs/plugin-vue-jsx": "^5.1.2",
+    "dotenv": "^17.2.3",
+    "electron": "^39.2.4",
+    "electron-builder": "^26.3.1",
+    "electron-extension-installer": "^2.0.1",
+    "eslint": "^9.39.1",
+    "jiti": "^2.6.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.4",
+    "vite-plugin-electron": "^0.29.0",
+    "vite-plugin-electron-renderer": "^0.14.6",
+    "vite-plugin-vue-devtools": "^8.0.5",
+    "vue-tsc": "^3.1.5"
+  },
+  "overrides": {
+    "vite-plugin-electron": {
+      "electron": "$electron"
+    }
+  }
+}

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - DtoStyleControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>DtoStyleControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.babyfish.jimmer.sql.example.web.html">org.babyfish.jimmer.sql.example.web</a> &gt; DtoStyleControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.605s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+<li>
+<a href="#">Standard error</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testFindComplexBooks()</td>
+<td class="success">0.061s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testFindRecursiveRootTreeNodes()</td>
+<td class="success">1.521s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testFindSimpleBooks()</td>
+<td class="success">0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testFindSimpleRootTreeNodes()</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre id="class-stdout">16:17:42.888 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [org.babyfish.jimmer.sql.example.web.DtoStyleControllerTest]: DtoStyleControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:17:42.996 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration org.babyfish.jimmer.sql.example.App for test class org.babyfish.jimmer.sql.example.web.DtoStyleControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-11-06T16:17:43.362+08:00  INFO 92083 --- [    Test worker] o.b.j.s.e.web.DtoStyleControllerTest     : Starting DtoStyleControllerTest using Java 23.0.2 with PID 92083 (started by shenyandu in /Users/shenyandu/CodeFree/github-warehouse/jimmer-examples/java/jimmer-simple)
+2025-11-06T16:17:43.363+08:00  INFO 92083 --- [    Test worker] o.b.j.s.e.web.DtoStyleControllerTest     : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-11-06T16:17:43.929+08:00  INFO 92083 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Jimmer repositories in DEFAULT mode.
+2025-11-06T16:17:43.967+08:00  INFO 92083 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 Jimmer repository interfaces.
+2025-11-06T16:17:44.785+08:00  INFO 92083 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-11-06T16:17:44.786+08:00  INFO 92083 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-11-06T16:17:44.787+08:00  INFO 92083 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-11-06T16:17:44.813+08:00  INFO 92083 --- [    Test worker] o.b.j.s.e.web.DtoStyleControllerTest     : Started DtoStyleControllerTest in 1.716 seconds (process running for 2.495)
+2025-11-06T16:17:45.297+08:00  INFO 92083 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-06T16:17:45.579+08:00  INFO 92083 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:jimmer-demo user=SA
+2025-11-06T16:17:45.589+08:00  INFO 92083 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-06T16:17:46.111+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===&gt;
+Purpose: QUERY
+SQL: select
+    tb_1_.ID,
+    tb_1_.NAME
+from TREE_NODE tb_1_
+where
+    tb_1_.PARENT_ID is null
+JDBC response status: success
+Time cost: 11ms
+&lt;===Execute SQL
+2025-11-06T16:17:46.137+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===&gt;
+Purpose: LOAD
+SQL: select
+    tb_1_.ID,
+    tb_1_.NAME
+from TREE_NODE tb_1_
+where
+    tb_1_.PARENT_ID = ? /* 1 */
+order by
+    tb_1_.NAME asc
+JDBC response status: success
+Time cost: 6ms
+&lt;===Execute SQL
+2025-11-06T16:17:46.158+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===&gt;
+Purpose: LOAD
+SQL: select
+    tb_1_.PARENT_ID,
+    tb_1_.ID,
+    tb_1_.NAME
+from TREE_NODE tb_1_
+where
+    tb_1_.PARENT_ID = any(? /* [9, 2] */)
+order by
+    tb_1_.NAME asc
+JDBC response status: success
+Time cost: 5ms
+&lt;===Execute SQL
+2025-11-06T16:17:46.159+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===&gt;
+Purpose: LOAD
+SQL: select
+    tb_1_.PARENT_ID,
+    tb_1_.ID,
+    tb_1_.NAME
+from TREE_NODE tb_1_
+where
+    tb_1_.PARENT_ID = any(? /* [18, 10, 6, 3] */)
+order by
+    tb_1_.NAME asc
+JDBC response status: success
+Time cost: 0ms
+&lt;===Execute SQL
+2025-11-06T16:17:46.163+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===&gt;
+Purpose: LOAD
+SQL: select
+    tb_1_.PARENT_ID,
+    tb_1_.ID,
+    tb_1_.NAME
+from TREE_NODE tb_1_
+where
+    tb_1_.PARENT_ID = any(? /* [19, 22, 11, 15, 7, 8, 4, 5] */)
+order by
+    tb_1_.NAME asc
+JDBC response status: success
+Time cost: 1ms
+&lt;===Execute SQL
+2025-11-06T16:17:46.169+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===&gt;
+Purpose: LOAD
+SQL: select
+    tb_1_.PARENT_ID,
+    tb_1_.ID,
+    tb_1_.NAME
+from TREE_NODE tb_1_
+where
+    tb_1_.PARENT_ID = any(? /* [20, 21, 24, 23, 12, 14, 13, 17, 16] */)
+order by
+    tb_1_.NAME asc
+JDBC response status: success
+Time cost: 2ms
+&lt;===Execute SQL
+2025-11-06T16:17:46.359+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===&gt;
+Purpose: QUERY
+SQL: select
+    tb_1_.ID,
+    tb_1_.NAME,
+    tb_1_.EDITION,
+    tb_1_.PRICE,
+    tb_1_.STORE_ID
+from BOOK tb_1_
+where
+    tb_1_.NAME = ? /* GraphQL in Action */
+JDBC response status: success
+Time cost: 2ms
+&lt;===Execute SQL
+2025-11-06T16:17:46.362+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===&gt;
+Purpose: LOAD
+SQL: select
+    tb_1_.ID,
+    tb_1_.NAME,
+    tb_1_.WEBSITE
+from BOOK_STORE tb_1_
+where
+    tb_1_.ID = ? /* 2 */
+JDBC response status: success
+Time cost: 1ms
+&lt;===Execute SQL
+2025-11-06T16:17:46.366+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===&gt;
+Purpose: LOAD
+SQL: select
+    tb_2_.BOOK_ID,
+    tb_1_.ID,
+    tb_1_.FIRST_NAME,
+    tb_1_.LAST_NAME,
+    tb_1_.GENDER
+from AUTHOR tb_1_
+inner join BOOK_AUTHOR_MAPPING tb_2_
+    on tb_1_.ID = tb_2_.AUTHOR_ID
+where
+    tb_2_.BOOK_ID = any(? /* [10, 11, 12] */)
+order by
+    tb_1_.FIRST_NAME asc,
+    tb_1_.LAST_NAME asc
+JDBC response status: success
+Time cost: 3ms
+&lt;===Execute SQL
+2025-11-06T16:17:46.411+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===&gt;
+Purpose: QUERY
+SQL: select
+    tb_1_.ID,
+    tb_1_.NAME
+from BOOK tb_1_
+where
+    tb_1_.NAME = ? /* GraphQL in Action */
+JDBC response status: success
+Time cost: 0ms
+&lt;===Execute SQL
+2025-11-06T16:17:46.424+08:00  INFO 92083 --- [    Test worker] o.b.jimmer.sql.runtime.ExecutorForLog    : Execute SQL===&gt;
+Purpose: QUERY
+SQL: select
+    tb_1_.ID,
+    tb_1_.NAME
+from TREE_NODE tb_1_
+where
+    tb_1_.PARENT_ID is null
+JDBC response status: success
+Time cost: 0ms
+&lt;===Execute SQL
+</pre>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="class-stdout">Copy</button>
+</span>
+</div>
+<div class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre id="class-stderr">Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/shenyandu/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.7/fbf3d6d649ed37fc9e9c59480a05be0a26e3c2da/byte-buddy-agent-1.17.7.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+</pre>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="class-stderr">Copy</button>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 9.1.0</a> at 2025年11月6日 16:17:46</p>
+</div>
+</div>
+</body>
+</html>

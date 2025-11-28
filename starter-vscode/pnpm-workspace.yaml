@@ -1,0 +1,7 @@
+packages:
+  - webview-ui
+onlyBuiltDependencies:
+  - '@vscode/vsce-sign'
+  - esbuild
+  - keytar
+  - vsxpub
