@@ -1,7 +1,6 @@
 {
-  "name": "sd",
-  "private": true,
-  "version": "0.0.0",
+  "name": "data-screen-template",
+  "description": "一款基于 Vue 3 + TypeScript + Vite 的数据大屏模板",
   "type": "module",
   "scripts": {
     "dev": "vite",

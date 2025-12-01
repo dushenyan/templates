@@ -1,7 +1,7 @@
 {
   "data-screen-template": {
-    "name": "sd",
-    "description": "",
+    "name": "data-screen-template",
+    "description": "一款基于 Vue 3 + TypeScript + Vite 的数据大屏模板",
     "type": "template",
     "tags": [
       "typescript",
@@ -30,7 +30,7 @@
   },
   "geeker-admin": {
     "name": "geeker-admin",
-    "description": "geeker-admin open source management system",
+    "description": "一款基于 Vue 3 + TypeScript + Vite 的管理系统模板",
     "type": "template",
     "tags": [
       "vue",
@@ -45,8 +45,8 @@
     "tags": []
   },
   "starter-monkey": {
-    "name": "vite-vue-ts-starter",
-    "description": "",
+    "name": "starter-monkey",
+    "description": "一款基于 Vue 3 + TypeScript + Vite 的油猴插件模板",
     "type": "template",
     "tags": [
       "vue",
@@ -54,8 +54,8 @@
     ]
   },
   "starter-ts": {
-    "name": "pkg-placeholder",
-    "description": "_description_",
+    "name": "starter-ts",
+    "description": "一款基于 TypeScript 的库模板",
     "type": "template",
     "tags": [
       "typescript"

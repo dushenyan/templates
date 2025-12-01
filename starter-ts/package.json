@@ -1,9 +1,8 @@
 {
-  "name": "pkg-placeholder",
+  "name": "starter-ts",
   "type": "module",
-  "version": "0.0.0",
   "packageManager": "pnpm@10.17.1",
-  "description": "_description_",
+  "description": "一款基于 TypeScript 的库模板",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/antfu",
