@@ -1,11 +1,113 @@
 {
   "data-screen-template": {
-    "type": "template"
+    "name": "sd",
+    "description": "",
+    "type": "template",
+    "tags": [
+      "typescript",
+      "vue",
+      "scss"
+    ]
   },
   "uniapp-template": {
-    "type": "template"
+    "name": "vite-uniapp-template",
+    "description": "以实用为先的 uni-app 起手模板",
+    "type": "template",
+    "tags": [
+      "typescript",
+      "vue",
+      "scss"
+    ]
   },
   "vutron": {
-    "type": "template"
+    "name": "vutron",
+    "description": "Quick Start Templates for Vite + Vue 3 + Electron",
+    "type": "template",
+    "tags": [
+      "vue",
+      "typescript"
+    ]
+  },
+  "geeker-admin": {
+    "name": "geeker-admin",
+    "description": "geeker-admin open source management system",
+    "type": "template",
+    "tags": [
+      "vue",
+      "typescript",
+      "scss"
+    ]
+  },
+  "jimmer-simple": {
+    "name": "jimmer-simple",
+    "description": "",
+    "type": "template",
+    "tags": []
+  },
+  "starter-monkey": {
+    "name": "vite-vue-ts-starter",
+    "description": "",
+    "type": "template",
+    "tags": [
+      "vue",
+      "typescript"
+    ]
+  },
+  "starter-ts": {
+    "name": "pkg-placeholder",
+    "description": "_description_",
+    "type": "template",
+    "tags": [
+      "typescript"
+    ]
+  },
+  "starter-vscode": {
+    "name": "ext-name",
+    "description": "",
+    "type": "template",
+    "tags": [
+      "react",
+      "typescript"
+    ]
+  },
+  "uniapp-app": {
+    "name": "uni-app",
+    "description": "",
+    "type": "template",
+    "tags": [
+      "typescript",
+      "vue",
+      "scss"
+    ]
+  },
+  "uniapp-lit": {
+    "name": "uni-app",
+    "description": "",
+    "type": "template",
+    "tags": [
+      "typescript",
+      "vue",
+      "scss"
+    ]
+  },
+  "vite-plugin-template": {
+    "name": "vite-plugin-name",
+    "description": "开箱即用的 vite 插件模板",
+    "type": "template",
+    "tags": [
+      "vite",
+      "plugin",
+      "template",
+      "typescript"
+    ]
+  },
+  "vitesse-lite": {
+    "name": "vitesse-lite",
+    "description": "",
+    "type": "template",
+    "tags": [
+      "vue",
+      "typescript"
+    ]
   }
 }
