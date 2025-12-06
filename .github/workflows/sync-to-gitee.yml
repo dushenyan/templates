@@ -11,5 +11,5 @@ jobs:
           dst: gitee/dushenyan
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}
-          static_list: "template" # 只同步这个仓库
+          static_list: "templates" # 只同步这个仓库
           force_update: true # 启用强制同步，覆盖式更新
