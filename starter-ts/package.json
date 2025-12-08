@@ -26,7 +26,9 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
-    "lint": "eslint",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:ui": "npx @eslint/config-inspector",
     "prepublishOnly": "nr build",
     "release": "bumpp",
     "start": "tsx src/index.ts",
@@ -58,5 +60,4 @@
   "lint-staged": {
     "*": "eslint --fix"
   }
-}
 }

@@ -1,5 +1,5 @@
 {
-  "name": "uni-app",
+  "name": "pkg-name",
   "type": "module",
   "version": "0.1.0",
   "private": true,
@@ -9,7 +9,8 @@
     "about": "unh info",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "lint:ui": "npx @eslint/config-inspector"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-4070620250821001",

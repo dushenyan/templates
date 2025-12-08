@@ -1,5 +1,5 @@
 {
-  "name": "vutron",
+  "name": "pkg-name",
   "appId": "com.vutron.vutron",
   "type": "commonjs",
   "version": "1.0.0",
@@ -35,7 +35,9 @@
     "build:mac": "npm run build:pre && CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --config=buildAssets/builder/config.js --mac",
     "build:linux": "npm run build:pre && electron-builder --config=buildAssets/builder/config.js --linux",
     "build:win": "npm run build:pre && electron-builder --config=buildAssets/builder/config.js --windows",
-    "lint": "eslint",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:ui": "npx @eslint/config-inspector",
     "lint:fix": "eslint --fix"
   },
   "dependencies": {

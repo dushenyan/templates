@@ -1,16 +1,16 @@
 {
   "data-screen-template": {
-    "name": "data-screen-template",
+    "name": "pkg-name",
     "description": "一款基于 Vue 3 + TypeScript + Vite 的数据大屏模板",
     "type": "template",
     "tags": [
       "typescript",
-      "vue",
-      "scss"
+      "scss",
+      "vue"
     ]
   },
   "uniapp-template": {
-    "name": "vite-uniapp-template",
+    "name": "pkg-name",
     "description": "以实用为先的 uni-app 起手模板",
     "type": "template",
     "tags": [
@@ -20,7 +20,7 @@
     ]
   },
   "vutron": {
-    "name": "vutron",
+    "name": "pkg-name",
     "description": "Quick Start Templates for Vite + Vue 3 + Electron",
     "type": "template",
     "tags": [
@@ -54,10 +54,12 @@
     ]
   },
   "starter-ts": {
-    "name": "starter-ts",
-    "description": "",
+    "name": "pkg-name",
+    "description": "A TypeScript library template",
     "type": "template",
-    "tags": []
+    "tags": [
+      "typescript"
+    ]
   },
   "starter-vscode": {
     "name": "pkg-name",
@@ -69,7 +71,7 @@
     ]
   },
   "uniapp-app": {
-    "name": "uni-app",
+    "name": "pkg-name",
     "description": "",
     "type": "template",
     "tags": [
@@ -79,7 +81,7 @@
     ]
   },
   "uniapp-lit": {
-    "name": "uni-app",
+    "name": "pkg-name",
     "description": "",
     "type": "template",
     "tags": [
@@ -89,7 +91,7 @@
     ]
   },
   "vite-plugin-template": {
-    "name": "vite-plugin-name",
+    "name": "pkg-name",
     "description": "开箱即用的 vite 插件模板",
     "type": "template",
     "tags": [

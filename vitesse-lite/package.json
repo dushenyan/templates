@@ -6,6 +6,8 @@
     "build": "vite build",
     "dev": "vite --port 3333 --open",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:ui": "npx @eslint/config-inspector",
     "typecheck": "vue-tsc",
     "preview": "vite preview",
     "test": "vitest",
