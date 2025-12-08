@@ -14,11 +14,11 @@ export function activate(context: ExtensionContext) {
   // 注册Webview视图提供者
   const provider = new HelloWorldSidebar(context.extensionUri)
   context.subscriptions.push(
-    window.registerWebviewViewProvider('ExtName.basic', provider),
+    window.registerWebviewViewProvider('PkgName.basic', provider),
   )
 
-  // 创建显示命令: ExtName.showHelloWorld
-  const showHelloWorldCommand = commands.registerCommand('ExtName.showHelloWorld', () => {
+  // 创建显示命令: PkgName.showHelloWorld
+  const showHelloWorldCommand = commands.registerCommand('PkgName.showHelloWorld', () => {
     HelloWorldPanel.render(context.extensionUri)
   })
 

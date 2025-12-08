@@ -1,26 +1,75 @@
-// See https://go.microsoft.com/fwlink/?LinkId=733558
-// for the documentation about the tasks.json format
 {
   "version": "2.0.0",
   "tasks": [
     {
       "type": "npm",
       "script": "dev",
-      "isBackground": true,
-      "presentation": {
-        "reveal": "never"
+      "group": "build",
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
+      "label": "npm: dev",
+      "detail": "开发模式：同时构建扩展和 Webview 界面"
+    },
+    {
+      "type": "npm",
+      "script": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
       },
       "problemMatcher": [
-        {
-          "base": "$tsc-watch",
-          "background": {
-            "activeOnStart": true,
-            "beginsPattern": "Build start",
-            "endsPattern": "(B|Reb)uild complete"
-          }
-        }
+        "$tsc"
       ],
-      "group": "build"
+      "label": "npm: build",
+      "detail": "构建扩展"
+    },
+    {
+      "type": "npm",
+      "script": "test",
+      "group": "test",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "label": "npm: test",
+      "detail": "运行测试"
+    },
+    {
+      "type": "npm",
+      "script": "lint",
+      "group": "build",
+      "problemMatcher": [
+        "$eslint-compact"
+      ],
+      "label": "npm: lint",
+      "detail": "代码检查"
+    },
+    {
+      "type": "npm",
+      "script": "lint:fix",
+      "group": "build",
+      "problemMatcher": [
+        "$eslint-compact"
+      ],
+      "label": "npm: lint:fix",
+      "detail": "自动修复代码格式问题"
+    },
+    {
+      "type": "npm",
+      "script": "typecheck",
+      "group": "build",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "label": "npm: typecheck",
+      "detail": "TypeScript 类型检查"
+    },
+    {
+      "type": "npm",
+      "script": "clean",
+      "group": "build",
+      "label": "npm: clean",
+      "detail": "清理构建文件"
     }
   ]
 }

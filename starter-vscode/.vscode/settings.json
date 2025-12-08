@@ -5,7 +5,7 @@
       {
         "match": "package.json",
         "isAsync": true,
-        "cmd": "npm run update"
+        "cmd": "pnpm run update"
       }
     ]
   },
@@ -14,13 +14,13 @@
   "prettier.enable": false,
   "editor.formatOnSave": false,
 
-  // Auto fix
+  // Auto fix on save
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never"
+    "source.organizeImports": "explicit"
   },
 
-  // Silent the stylistic rules in you IDE, but still auto fix them
+  // Silent the stylistic rules in your IDE, but still auto fix them
   "eslint.rules.customizations": [
     { "rule": "style/*", "severity": "off" },
     { "rule": "*-indent", "severity": "off" },
@@ -45,5 +45,24 @@
     "json",
     "jsonc",
     "yaml"
-  ]
+  ],
+
+  // Quick suggestions and IntelliSense
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.suggest.showStatusBar": true,
+  "editor.snippetSuggestions": "inline",
+
+  // TypeScript settings
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // File settings
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+
+  // Misc
+  "codingcopilot.enableCompletionLanguage": {}
 }

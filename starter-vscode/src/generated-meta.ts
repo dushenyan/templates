@@ -2,28 +2,28 @@
 // @see https://github.com/antfu/vscode-ext-gen
 
 // Meta info
-export const publisher = "dushenyan"
-export const name = "ext-name"
+export const publisher = "your-username"
+export const name = "pkg-name"
 export const version = "0.0.0"
-export const displayName = "ext-name"
-export const description = undefined
+export const displayName = "pkg-name"
+export const description = "这是一个 VS Code 扩展的模板项目，使用 Vue 3 + TypeScript + reactive-vscode 构建"
 export const extensionId = `${publisher}.${name}`
 
 /**
  * Type union of all commands
  */
 export type CommandKey = 
-  | "ExtName.showHelloWorld"
+  | "PkgName.showHelloWorld"
 
 /**
- * Commands map registed by `dushenyan.ext-name`
+ * Commands map registed by `your-username.pkg-name`
  */
 export const commands = {
   /**
    * Hello World (Vue): Show
-   * @value `ExtName.showHelloWorld`
+   * @value `PkgName.showHelloWorld`
    */
-  extNameShowHelloWorld: "ExtName.showHelloWorld",
+  pkgNameShowHelloWorld: "PkgName.showHelloWorld",
 } satisfies Record<string, CommandKey>
 
 /**
@@ -47,7 +47,7 @@ export interface ConfigItem<T extends keyof ConfigKeyTypeMap> {
 
 
 /**
- * Configs map registered by `dushenyan.ext-name`
+ * Configs map registered by `your-username.pkg-name`
  */
 export const configs = {
 }
@@ -56,7 +56,7 @@ export interface ScopedConfigKeyTypeMap {
 }
 
 export const scopedConfigs = {
-  scope: "ext-name",
+  scope: "pkg-name",
   defaults: {
   } satisfies ScopedConfigKeyTypeMap,
 }

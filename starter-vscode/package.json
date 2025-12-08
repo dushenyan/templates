@@ -1,21 +1,18 @@
 {
-  "publisher": "dushenyan",
-  "name": "ext-name",
-  "displayName": "ext-name",
+  "publisher": "your-username",
+  "name": "pkg-name",
+  "displayName": "pkg-name",
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@10.4.1",
-  "description": "",
-  "author": "Dushenyan <dushenyan88@gmail.com>",
-  "license": "MIT",
-  "funding": "https://github.com/sponsors/dushenyan",
-  "homepage": "https://github.com/dushenyan/ext-name#readme",
+  "description": "这是一个 VS Code 扩展的模板项目，使用 Vue 3 + TypeScript + reactive-vscode 构建",
+  "author": "Your Name <your.email@example.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dushenyan/ext-name"
+    "url": "https://github.com/your-username/pkg-name"
   },
   "bugs": {
-    "url": "https://github.com/dushenyan/ext-name/issues"
+    "url": "https://github.com/your-username/pkg-name/issues"
   },
   "categories": [
     "Other"
@@ -23,7 +20,6 @@
   "main": "./dist/index.js",
   "icon": "res/icon.png",
   "files": [
-    "LICENSE.md",
     "dist/*",
     "res/*"
   ],
@@ -36,29 +32,29 @@
   "contributes": {
     "commands": [
       {
-        "command": "ExtName.showHelloWorld",
+        "command": "PkgName.showHelloWorld",
         "title": "Hello World (Vue): Show"
       }
     ],
     "configuration": {
       "type": "object",
-      "title": "ext-name",
+      "title": "pkg-name",
       "properties": {}
     },
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "ExtName",
-          "title": "ext-name",
+          "id": "PkgName",
+          "title": "pkg-name",
           "icon": "res/icon.svg"
         }
       ]
     },
     "views": {
-      "ExtName": [
+      "PkgName": [
         {
-          "id": "ExtName.basic",
-          "name": "ext name configurator",
+          "id": "PkgName.basic",
+          "name": "pkg name configurator",
           "icon": "res/icon.svg",
           "type": "webview"
         }
@@ -68,17 +64,22 @@
   "scripts": {
     "build": "tsdown src/index.ts --external vscode",
     "dev": "npm-run-all --parallel dev:webview dev:plugin",
-    "dev:webview": "pnpm --filter webview-ui build",
+    "dev:webview": "pnpm --filter webview-ui dev",
     "dev:plugin": "nr build --watch --sourcemap",
-    "prepare": "nr update",
     "update": "vscode-ext-gen --output src/generated-meta.ts",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
+    "typecheck:webview": "pnpm --filter webview-ui typecheck",
+    "typecheck:all": "run-p typecheck typecheck:webview",
     "vscode:prepublish": "nr build",
     "release": "bumpp",
     "ext:package": "vsce package --no-dependencies",
-    "ext:publish": "vsxpub --no-dependencies"
+    "ext:publish": "vsxpub --no-dependencies",
+    "clean": "rimraf dist webview-ui/dist",
+    "dev:start": "./scripts/dev.sh",
+    "build:full": "./scripts/build.sh"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.2.1",
@@ -93,6 +94,7 @@
     "ovsx": "^0.10.5",
     "pnpm": "^10.4.1",
     "reactive-vscode": "^0.2.10",
+    "rimraf": "^6.0.1",
     "tsdown": "^0.9.6",
     "typescript": "^5.7.3",
     "vite": "^6.1.0",

@@ -1,14 +1,17 @@
+// @ts-check
 import antfu from '@antfu/eslint-config'
 
 export default antfu(
   {
     ignores: [
-      // eslint ignore globs here
+      'dist',
+      'node_modules',
+      'coverage',
     ],
   },
   {
     rules: {
-      // overrides
+      // 可以在这里添加特定的规则覆盖
     },
   },
 )

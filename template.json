@@ -60,8 +60,8 @@
     "tags": []
   },
   "starter-vscode": {
-    "name": "ext-name",
-    "description": "",
+    "name": "pkg-name",
+    "description": "这是一个 VS Code 扩展的模板项目，使用 Vue 3 + TypeScript + reactive-vscode 构建",
     "type": "template",
     "tags": [
       "react",
