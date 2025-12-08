@@ -1,17 +1,16 @@
 {
-  "name": "starter-ts",
+  "name": "pkg-name",
   "type": "module",
   "packageManager": "pnpm@10.17.1",
-  "description": "一款基于 TypeScript 的库模板",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "description": "A TypeScript library template",
+  "author": "Your Name <your.email@example.com>",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/antfu",
-  "homepage": "https://github.com/antfu/pkg-placeholder#readme",
+  "homepage": "https://github.com/your-username/pkg-name#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antfu/pkg-placeholder.git"
+    "url": "git+https://github.com/your-username/pkg-name.git"
   },
-  "bugs": "https://github.com/antfu/pkg-placeholder/issues",
+  "bugs": "https://github.com/your-username/pkg-name/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
@@ -59,4 +58,5 @@
   "lint-staged": {
     "*": "eslint --fix"
   }
+}
 }

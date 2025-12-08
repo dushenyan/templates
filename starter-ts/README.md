@@ -1,42 +1,63 @@
-# pkg-placeholder
+# pkg-name
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![bundle][bundle-src]][bundle-href]
-[![JSDocs][jsdocs-src]][jsdocs-href]
-[![License][license-src]][license-href]
+## 介绍
 
-_description_
+一个快速创建现代库的 TypeScript 库模板，使用 TypeScript、ESLint、Prettier、Vitest 等工具。
 
-## Note for Developers
+## 特性
 
-This starter recommands using [npm Trusted Publisher](https://github.com/e18e/ecosystem-issues/issues/201), where the release is done on CI to ensure the security of the packages.
+- 🚀 使用 TypeScript 构建
+- 📦 使用 tsdown 零配置构建
+- ✨ 集成 ESLint 和 Prettier
+- 🧪 使用 Vitest 进行测试
+- 📋 使用 lint-staged 进行 Git 钩子
+- 🚀 CI/CD 使用 GitHub Actions
+- 📚 自动生成 API 文档
 
-To do so, you need to run `pnpm publish` manually for the very first time to create the package on npm, and then go to `https://www.npmjs.com/package/<your-package-name>/access` to set the connection to your GitHub repo.
+## 快速开始
 
-Then for the future releases, you can run `pnpm run release` to do the release and the GitHub Actions will take care of the release process.
+```bash
+# 克隆这个模板
+git clone https://github.com/your-username/pkg-name.git my-new-package
+cd my-new-package
 
-## Sponsors
+# 安装依赖
+pnpm install
 
-<p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg'/>
-  </a>
-</p>
+# 开始开发
+pnpm dev
 
-## License
+# 运行测试
+pnpm test
 
-[MIT](./LICENSE) License © [Anthony Fu](https://github.com/antfu)
+# 构建生产环境
+pnpm build
+```
 
-<!-- Badges -->
+## 使用
 
-[npm-version-src]: https://img.shields.io/npm/v/pkg-placeholder?style=flat&colorA=080f12&colorB=1fa669
-[npm-version-href]: https://npmjs.com/package/pkg-placeholder
-[npm-downloads-src]: https://img.shields.io/npm/dm/pkg-placeholder?style=flat&colorA=080f12&colorB=1fa669
-[npm-downloads-href]: https://npmjs.com/package/pkg-placeholder
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/pkg-placeholder?style=flat&colorA=080f12&colorB=1fa669&label=minzip
-[bundle-href]: https://bundlephobia.com/result?p=pkg-placeholder
-[license-src]: https://img.shields.io/github/license/antfu/pkg-placeholder.svg?style=flat&colorA=080f12&colorB=1fa669
-[license-href]: https://github.com/antfu/pkg-placeholder/blob/main/LICENSE
-[jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669
-[jsdocs-href]: https://www.jsdocs.io/package/pkg-placeholder
+```ts
+import { one, two } from 'pkg-name'
+
+console.log(one) // 1
+console.log(two) // 2
+```
+
+## 开发
+
+这个模板使用 [npm Trusted Publisher](https://github.com/e18e/ecosystem-issues/issues/201) 进行安全发布，通过 CI 进行发布。
+
+### 设置
+
+1. 手动运行 `pnpm publish` 第一次发布到 npm
+2. 前往 `https://www.npmjs.com/package/pkg-name/access` 连接你的 GitHub 仓库
+3. 以后的发布可以使用 `pnpm run release`
+
+### 脚本
+
+- `pnpm dev` - 启动开发模式并监听
+- `pnpm build` - 构建库
+- `pnpm test` - 运行测试
+- `pnpm lint` - 运行 ESLint
+- `pnpm typecheck` - 运行 TypeScript 类型检查
+- `pnpm release` - 发布新版本

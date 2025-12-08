@@ -55,11 +55,9 @@
   },
   "starter-ts": {
     "name": "starter-ts",
-    "description": "一款基于 TypeScript 的库模板",
+    "description": "",
     "type": "template",
-    "tags": [
-      "typescript"
-    ]
+    "tags": []
   },
   "starter-vscode": {
     "name": "ext-name",

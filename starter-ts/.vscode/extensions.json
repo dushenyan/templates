@@ -1,6 +1,8 @@
 {
   "recommendations": [
+    "antfu.eslint-config",
     "dbaeumer.vscode-eslint",
-    "antfu.pnpm-catalog-lens"
+    "vue.volar",
+    "ms-vscode.vscode-typescript-next"
   ]
 }
