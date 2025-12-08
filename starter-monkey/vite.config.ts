@@ -9,9 +9,14 @@ export default defineConfig({
     monkey({
       entry: 'src/main.ts',
       userscript: {
+        name: 'pkg-name',
+        namespace: 'pkg-namespace',
+        description: 'pkg-description',
+        version: '0.0.1',
+        author: 'pkg-author',
         icon: 'https://vitejs.dev/logo.svg',
-        namespace: 'npm/vite-plugin-monkey',
-        match: ['https://www.google.com/'],
+        match: ['https://target-website.com/*'],
+        grant: ['GM_addStyle', 'GM_getValue', 'GM_setValue'],
       },
       build: {
         externalGlobals: {

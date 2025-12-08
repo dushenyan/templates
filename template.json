@@ -45,8 +45,8 @@
     "tags": []
   },
   "starter-monkey": {
-    "name": "starter-monkey",
-    "description": "一款基于 Vue 3 + TypeScript + Vite 的油猴插件模板",
+    "name": "pkg-name",
+    "description": "基于 Vue 3 + TypeScript + Vite 的油猴插件",
     "type": "template",
     "tags": [
       "vue",
