@@ -1,29 +1,24 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-defineProps<{ msg: string }>();
+defineProps<{ msg: string }>()
 
-const count = ref(0);
+const count = ref(0)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <h2>{{ msg }}，开始你的工作吧！</h2>
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
-  </div>
-
-  <p class="read-the-docs">
-    开始开发你的油猴插件功能吧！
-  </p>
+  <button type="button" @click="count++">
+    count is {{ count }}
+  </button>
 </template>
 
 <style scoped>
-.read-the-docs {
+h2 {
+  font-size: 18px;
+  margin-bottom: .75rem;
+  line-height: 1.5em;
   color: #888;
 }
 </style>

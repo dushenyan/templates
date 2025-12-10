@@ -1,6 +1,7 @@
-import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import monkey, { cdn } from 'vite-plugin-monkey';
+import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite'
+import monkey, { cdn } from 'vite-plugin-monkey'
+import { author, description, version } from './package.json'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,14 +10,17 @@ export default defineConfig({
     monkey({
       entry: 'src/main.ts',
       userscript: {
-        name: 'pkg-name',
-        namespace: 'pkg-namespace',
-        description: 'pkg-description',
-        version: '0.0.1',
-        author: 'pkg-author',
-        icon: 'https://vitejs.dev/logo.svg',
-        match: ['https://target-website.com/*'],
-        grant: ['GM_addStyle', 'GM_getValue', 'GM_setValue'],
+        'name': 'pkg-name',
+        'namespace': 'pkg-namespace',
+        description,
+        version,
+        author,
+        'icon': 'https://vitejs.dev/logo.svg',
+        'match': ['*://*/*'],
+        'grant': ['GM_addStyle', 'GM_getValue', 'GM_setValue', 'GM_registerMenuCommand', 'GM_getResourceText', 'GM_openInTab', 'GM_notification'],
+        'run-at': 'document-end',
+        'noframes': false,
+        'inject-into': 'page',
       },
       build: {
         externalGlobals: {
@@ -25,4 +29,4 @@ export default defineConfig({
       },
     }),
   ],
-});
+})
