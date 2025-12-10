@@ -4,19 +4,19 @@
 // Meta info
 export const publisher = "your-username"
 export const name = "pkg-name"
-export const version = "0.0.0"
+export const version = "0.0.1"
 export const displayName = "pkg-name"
-export const description = "这是一个 VS Code 扩展的模板项目，使用 Vue 3 + TypeScript + reactive-vscode 构建"
+export const description = "VS Code 扩展的模板项目"
 export const extensionId = `${publisher}.${name}`
 
 /**
  * Type union of all commands
  */
-export type CommandKey = 
+export type CommandKey =
   | "PkgName.showHelloWorld"
 
 /**
- * Commands map registed by `your-username.pkg-name`
+ * Commands map registered by `your-username.pkg-name`
  */
 export const commands = {
   /**

@@ -1,14 +1,8 @@
 import type { ExtensionContext } from 'vscode'
-// import { defineExtension } from 'reactive-vscode'
 import { commands, window } from 'vscode'
 
 import { HelloWorldPanel } from './HelloWorldPanel'
 import { HelloWorldSidebar } from './HelloWorldSidebar'
-
-// const { activate, deactivate } = defineExtension(() => {
-// })
-
-// export { activate, deactivate }
 
 export function activate(context: ExtensionContext) {
   // 注册Webview视图提供者

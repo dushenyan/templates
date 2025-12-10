@@ -64,5 +64,6 @@
   "files.trimTrailingWhitespace": true,
 
   // Misc
-  "codingcopilot.enableCompletionLanguage": {}
+  "codingcopilot.enableCompletionLanguage": {},
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

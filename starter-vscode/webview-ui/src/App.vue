@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { provideVSCodeDesignSystem, vsCodeButton, vsCodeDropdown, vsCodeOption } from '@vscode/webview-ui-toolkit'
-import { vscode } from './utils/vscode'
+import { provideVSCodeDesignSystem, vsCodeButton, vsCodeDropdown, vsCodeOption } from '@vscode/webview-ui-toolkit';
+import { vscode } from './utils/vscode';
 
 // In order to use the Webview UI Toolkit web components they
 // must be registered with the browser (i.e. webview) using the
@@ -24,21 +24,21 @@ provideVSCodeDesignSystem().register(vsCodeButton(), vsCodeDropdown(), vsCodeOpt
 function handleHowdyClick() {
   vscode.postMessage({
     command: 'hello',
-    text: 'Hey there partner! 🤠',
+    text: '不要点击我啊! 🤠',
   })
 }
 </script>
 
 <template>
   <main>
-    <h1>Hello world!</h1>
+    <h2>欢迎使用本模版开发! 🤠</h2>
     <vscode-button @click="handleHowdyClick">
-      Howdy!
+      点击我
     </vscode-button>
     <vscode-dropdown position="below" style="margin-top: 10px;">
-      <vscode-option>Option Label #1</vscode-option>
-      <vscode-option>Option Label #2</vscode-option>
-      <vscode-option>Option Label #3</vscode-option>
+      <vscode-option>选项 #1</vscode-option>
+      <vscode-option>选项 #2</vscode-option>
+      <vscode-option>选项 #3</vscode-option>
     </vscode-dropdown>
   </main>
 </template>

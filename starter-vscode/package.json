@@ -2,18 +2,10 @@
   "publisher": "your-username",
   "name": "pkg-name",
   "displayName": "pkg-name",
-  "version": "0.0.0",
-  "private": true,
-  "packageManager": "pnpm@10.4.1",
-  "description": "这是一个 VS Code 扩展的模板项目，使用 Vue 3 + TypeScript + reactive-vscode 构建",
-  "author": "Your Name <your.email@example.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/your-username/pkg-name"
-  },
-  "bugs": {
-    "url": "https://github.com/your-username/pkg-name/issues"
-  },
+  "version": "0.0.1",
+  "packageManager": "pnpm@10.25.0",
+  "description": "VS Code 扩展的模板项目",
+  "author": "dushenyan<dushenyan88@gmail.com>",
   "categories": [
     "Other"
   ],
@@ -24,7 +16,7 @@
     "res/*"
   ],
   "engines": {
-    "vscode": "^1.97.0"
+    "vscode": "^1.106.1"
   },
   "activationEvents": [
     "onStartupFinished"
@@ -62,44 +54,39 @@
     }
   },
   "scripts": {
-    "build": "tsdown src/index.ts --external vscode",
+    "build": "tsdown",
     "dev": "npm-run-all --parallel dev:webview dev:plugin",
-    "dev:webview": "pnpm --filter webview-ui dev",
-    "dev:plugin": "nr build --watch --sourcemap",
+    "dev:webview": "pnpm --filter webview-ui build --watch",
+    "dev:plugin": "pnpm run build --watch --sourcemap",
     "update": "vscode-ext-gen --output src/generated-meta.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "vitest",
-    "typecheck": "tsc --noEmit",
-    "typecheck:webview": "pnpm --filter webview-ui typecheck",
-    "typecheck:all": "run-p typecheck typecheck:webview",
-    "vscode:prepublish": "nr build",
-    "release": "bumpp",
-    "ext:package": "vsce package --no-dependencies",
-    "ext:publish": "vsxpub --no-dependencies",
-    "clean": "rimraf dist webview-ui/dist",
-    "dev:start": "./scripts/dev.sh",
-    "build:full": "./scripts/build.sh"
+    "bumpp": "bumpp",
+    "vscode:package": "vsce package --no-dependencies",
+    "vscode:publish": "pnpm run build && vsce publish --no-dependencies",
+    "ovsx:publish": "pnpm run build && ovsx publish --no-dependencies",
+    "clean": "rimraf dist webview-ui/dist"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.2.1",
+    "@antfu/eslint-config": "^4.19.0",
     "@antfu/ni": "^23.3.1",
-    "@types/node": "^22.13.4",
-    "@types/vscode": "^1.97.0",
-    "@vscode/vsce": "^3.2.2",
-    "bumpp": "^10.0.3",
-    "eslint": "^9.20.1",
+    "@types/node": "^22.19.2",
+    "@types/vscode": "^1.106.1",
+    "@vscode/vsce": "^3.7.1",
+    "bumpp": "^10.3.2",
+    "eslint": "^9.39.1",
     "esno": "^4.8.0",
     "npm-run-all": "^4.1.5",
-    "ovsx": "^0.10.5",
-    "pnpm": "^10.4.1",
-    "reactive-vscode": "^0.2.10",
-    "rimraf": "^6.0.1",
-    "tsdown": "^0.9.6",
-    "typescript": "^5.7.3",
-    "vite": "^6.1.0",
-    "vitest": "^3.0.5",
-    "vscode-ext-gen": "^1.0.0",
-    "vsxpub": "^0.1.0"
+    "ovsx": "^0.10.7",
+    "pnpm": "^10.25.0",
+    "reactive-vscode": "^0.2.22",
+    "rimraf": "^6.1.2",
+    "tsdown": "^0.9.9",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.14",
+    "vitest": "^3.2.4",
+    "vscode-ext-gen": "^1.4.0",
+    "vsxpub": "^0.1.2"
   }
 }
