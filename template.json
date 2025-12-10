@@ -91,14 +91,16 @@
     ]
   },
   "vite-plugin-template": {
-    "name": "pkg-name",
-    "description": "开箱即用的 vite 插件模板",
+    "name": "vite-plugin-template",
+    "description": "开箱即用的 Vite 插件模板，包含完整的开发、测试和发布流程",
     "type": "template",
     "tags": [
       "vite",
       "plugin",
       "template",
-      "typescript"
+      "development",
+      "typescript",
+      "testing"
     ]
   },
   "vitesse-lite": {
