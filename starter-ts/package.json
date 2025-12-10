@@ -2,15 +2,10 @@
   "name": "pkg-name",
   "type": "module",
   "packageManager": "pnpm@10.17.1",
-  "description": "A TypeScript library template",
-  "author": "Your Name <your.email@example.com>",
-  "license": "MIT",
+  "__description__": "__description__",
+  "description": "快速创建现代库的 TypeScript 库模板",
+  "author": "dushenyan<dushenyan88@gmail.com>",
   "homepage": "https://github.com/your-username/pkg-name#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/your-username/pkg-name.git"
-  },
-  "bugs": "https://github.com/your-username/pkg-name/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {

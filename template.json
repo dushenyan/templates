@@ -55,7 +55,7 @@
   },
   "starter-ts": {
     "name": "pkg-name",
-    "description": "A TypeScript library template",
+    "description": "快速创建现代库的 TypeScript 库模板",
     "type": "template",
     "tags": [
       "typescript"
