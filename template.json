@@ -1,90 +1,44 @@
 {
   "data-screen-template": {
-    "name": "pkg-name",
-    "description": "基于 Vue 3 + TypeScript + Vite 的数据大屏模板",
-    "type": "template",
-    "tags": [
-      "typescript",
-      "scss",
-      "vue"
-    ]
+    "name": "data-screen-template",
+    "description": "基于 Vue 3 + TypeScript + Vite 的数据大屏模板"
   },
   "geeker-admin": {
     "name": "geeker-admin",
-    "description": "基于 Vue 3 + TypeScript + Vite 的管理系统模板",
-    "type": "template",
-    "tags": [
-      "vue",
-      "typescript",
-      "scss"
-    ]
+    "description": "基于 Vue 3 + TypeScript + Vite 的管理系统模板"
   },
   "jimmer-simple": {
     "name": "jimmer-simple",
-    "description": "",
-    "type": "template",
-    "tags": []
+    "description": ""
   },
   "starter-monkey": {
-    "name": "pkg-name",
-    "description": "基于 Vue 3 + TypeScript + Vite 的油猴插件",
-    "type": "template",
-    "tags": [
-      "vue",
-      "typescript"
-    ]
+    "name": "starter-monkey",
+    "description": "基于 Vue 3 + TypeScript + Vite 的油猴插件"
   },
   "starter-ts": {
-    "name": "pkg-name",
+    "name": "starter-ts",
     "description": "快速创建现代库的 TypeScript 库模板",
-    "type": "template",
-    "tags": [
-      "typescript"
-    ]
+    "tags": []
   },
   "starter-vscode": {
-    "name": "pkg-name",
-    "description": "快速创建VS Code扩展模板项目",
-    "type": "template",
-    "tags": [
-      "react",
-      "typescript"
-    ]
+    "name": "starter-vscode",
+    "description": "快速创建VS Code扩展模板项目"
   },
   "uniapp-app": {
-    "name": "pkg-name",
-    "description": "创建Uniapp重量级项目",
-    "type": "template",
-    "tags": [
-      "typescript",
-      "vue",
-      "scss"
-    ]
+    "name": "uniapp-app",
+    "description": "创建Uniapp重量级项目"
   },
   "uniapp-lit": {
-    "name": "pkg-name",
-    "description": "创建Uniapp轻量级项目",
-    "type": "template",
-    "tags": [
-      "typescript",
-      "vue",
-      "scss"
-    ]
+    "name": "uniapp-lit",
+    "description": "创建Uniapp轻量级项目"
   },
   "uniapp-template": {
-    "name": "pkg-name",
-    "description": "以实用为先的 uni-app 起手模板",
-    "type": "template",
-    "tags": [
-      "typescript",
-      "vue",
-      "scss"
-    ]
+    "name": "uniapp-template",
+    "description": "以实用为先的 uni-app 起手模板"
   },
   "vite-plugin-template": {
     "name": "vite-plugin-template",
     "description": "开箱即用的 Vite 插件模板",
-    "type": "template",
     "tags": [
       "vite",
       "plugin",
@@ -95,12 +49,7 @@
     ]
   },
   "vutron": {
-    "name": "pkg-name",
-    "description": "现代化 Electron + Vue 3 应用模板",
-    "type": "template",
-    "tags": [
-      "vue",
-      "typescript"
-    ]
+    "name": "vutron",
+    "description": "现代化 Electron + Vue 3 应用模板"
   }
 }
