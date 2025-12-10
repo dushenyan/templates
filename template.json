@@ -17,8 +17,7 @@
   },
   "starter-ts": {
     "name": "starter-ts",
-    "description": "快速创建现代库的 TypeScript 库模板",
-    "tags": []
+    "description": "快速创建现代库的 TypeScript 库模板"
   },
   "starter-vscode": {
     "name": "starter-vscode",
@@ -38,15 +37,7 @@
   },
   "vite-plugin-template": {
     "name": "vite-plugin-template",
-    "description": "开箱即用的 Vite 插件模板",
-    "tags": [
-      "vite",
-      "plugin",
-      "template",
-      "development",
-      "typescript",
-      "testing"
-    ]
+    "description": "开箱即用的 Vite 插件模板"
   },
   "vutron": {
     "name": "vutron",

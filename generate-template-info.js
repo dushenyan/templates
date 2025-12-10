@@ -45,10 +45,6 @@ function generateTemplateInfo() {
         templateInfo.name = dir;
         templateInfo.description = packageJson.description || '';
 
-        // 从 package.json 中提取关键词作为标签
-        if (packageJson.keywords && Array.isArray(packageJson.keywords)) {
-          templateInfo.tags = packageJson.keywords;
-        }
       } catch (err) {
         console.warn(`读取 ${dir}/package.json 时出错:`, err.message);
       }
@@ -62,15 +58,6 @@ function generateTemplateInfo() {
   // 写入模板配置文件
   fs.writeFileSync(templateConfigPath, JSON.stringify(templateConfig, null, 2));
   console.log('模板信息生成完成!');
-}
-
-/**
- * 添加唯一标签
- */
-function addUniqueTag(tags, tag) {
-  if (!tags.includes(tag)) {
-    tags.push(tag);
-  }
 }
 
 // 执行脚本
