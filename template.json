@@ -21,7 +21,7 @@
   },
   "vutron": {
     "name": "pkg-name",
-    "description": "Quick Start Templates for Vite + Vue 3 + Electron",
+    "description": "现代化 Electron + Vue 3 应用模板",
     "type": "template",
     "tags": [
       "vue",

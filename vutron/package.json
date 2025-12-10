@@ -2,19 +2,10 @@
   "name": "pkg-name",
   "appId": "com.vutron.vutron",
   "type": "commonjs",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": true,
-  "description": "Quick Start Templates for Vite + Vue 3 + Electron",
-  "author": "CDGet <jooy2.contact@gmail.com>",
-  "license": "MIT",
-  "homepage": "https://vutron.cdget.com",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jooy2/vutron.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jooy2/vutron/issues"
-  },
+  "__description__": "__description__",
+  "description": "现代化 Electron + Vue 3 应用模板",
   "main": "dist/main/index.js",
   "debug": {
     "env": {
@@ -37,8 +28,7 @@
     "build:win": "npm run build:pre && electron-builder --config=buildAssets/builder/config.js --windows",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "lint:ui": "npx @eslint/config-inspector",
-    "lint:fix": "eslint --fix"
+    "lint:ui": "npx @eslint/config-inspector"
   },
   "dependencies": {
     "@arco-design/web-vue": "^2.57.0",

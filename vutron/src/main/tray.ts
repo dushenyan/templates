@@ -9,6 +9,7 @@ let trayOptions
 
 export function createTray(window: BrowserWindow, options) {
   trayOptions = options || Constants.DEFAULT_TRAY_OPTIONS
+
   // menu or trayWindow, you need to choose
   if (trayOptions.trayWindow) {
     trayOptions.menu = false

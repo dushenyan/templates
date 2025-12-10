@@ -50,5 +50,6 @@
   "i18n-ally.localesPaths": [
     "src/renderer/locales"
   ],
-  "i18n-ally.sourceLanguage": "zh-hans"
+  "i18n-ally.sourceLanguage": "zh-hans",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

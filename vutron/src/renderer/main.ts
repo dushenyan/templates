@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
 
 import App from '@/renderer/App.vue'
+import { createArcoDesign } from '@/renderer/plugins/arco-design'
 import i18n from '@/renderer/plugins/i18n'
 import pinia from '@/renderer/plugins/pinia'
-import { createArcoDesign } from '@/renderer/plugins/arco-design'
 import router from '@/renderer/router'
 
 // Add API key defined in contextBridge to window object type
