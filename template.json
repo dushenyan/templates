@@ -1,7 +1,7 @@
 {
   "data-screen-template": {
     "name": "pkg-name",
-    "description": "一款基于 Vue 3 + TypeScript + Vite 的数据大屏模板",
+    "description": "基于 Vue 3 + TypeScript + Vite 的数据大屏模板",
     "type": "template",
     "tags": [
       "typescript",
@@ -9,28 +9,9 @@
       "vue"
     ]
   },
-  "uniapp-template": {
-    "name": "pkg-name",
-    "description": "以实用为先的 uni-app 起手模板",
-    "type": "template",
-    "tags": [
-      "typescript",
-      "vue",
-      "scss"
-    ]
-  },
-  "vutron": {
-    "name": "pkg-name",
-    "description": "现代化 Electron + Vue 3 应用模板",
-    "type": "template",
-    "tags": [
-      "vue",
-      "typescript"
-    ]
-  },
   "geeker-admin": {
     "name": "geeker-admin",
-    "description": "一款基于 Vue 3 + TypeScript + Vite 的管理系统模板",
+    "description": "基于 Vue 3 + TypeScript + Vite 的管理系统模板",
     "type": "template",
     "tags": [
       "vue",
@@ -63,7 +44,7 @@
   },
   "starter-vscode": {
     "name": "pkg-name",
-    "description": "VS Code 扩展的模板项目",
+    "description": "快速创建VS Code扩展模板项目",
     "type": "template",
     "tags": [
       "react",
@@ -72,7 +53,7 @@
   },
   "uniapp-app": {
     "name": "pkg-name",
-    "description": "",
+    "description": "创建Uniapp重量级项目",
     "type": "template",
     "tags": [
       "typescript",
@@ -82,7 +63,17 @@
   },
   "uniapp-lit": {
     "name": "pkg-name",
-    "description": "",
+    "description": "创建Uniapp轻量级项目",
+    "type": "template",
+    "tags": [
+      "typescript",
+      "vue",
+      "scss"
+    ]
+  },
+  "uniapp-template": {
+    "name": "pkg-name",
+    "description": "以实用为先的 uni-app 起手模板",
     "type": "template",
     "tags": [
       "typescript",
@@ -92,7 +83,7 @@
   },
   "vite-plugin-template": {
     "name": "vite-plugin-template",
-    "description": "开箱即用的 Vite 插件模板，包含完整的开发、测试和发布流程",
+    "description": "开箱即用的 Vite 插件模板",
     "type": "template",
     "tags": [
       "vite",
@@ -103,9 +94,9 @@
       "testing"
     ]
   },
-  "vitesse-lite": {
-    "name": "vitesse-lite",
-    "description": "",
+  "vutron": {
+    "name": "pkg-name",
+    "description": "现代化 Electron + Vue 3 应用模板",
     "type": "template",
     "tags": [
       "vue",
