@@ -6,7 +6,7 @@ export const publisher = "your-username"
 export const name = "pkg-name"
 export const version = "0.0.1"
 export const displayName = "pkg-name"
-export const description = "VS Code 扩展的模板项目"
+export const description = "快速创建VS Code扩展模板项目"
 export const extensionId = `${publisher}.${name}`
 
 /**

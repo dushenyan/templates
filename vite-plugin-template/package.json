@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "packageManager": "pnpm@10.17.1",
   "__description__": "__description__",
-  "description": "开箱即用的 Vite 插件模板，包含完整的开发、测试和发布流程",
+  "description": "开箱即用的 Vite 插件模板",
   "author": "dushenyan<dushenyan88@gmail.com>",
   "keywords": [
     "vite",

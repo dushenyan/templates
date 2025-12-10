@@ -4,7 +4,7 @@
   "displayName": "pkg-name",
   "version": "0.0.1",
   "packageManager": "pnpm@10.25.0",
-  "description": "VS Code 扩展的模板项目",
+  "description": "快速创建VS Code扩展模板项目",
   "author": "dushenyan<dushenyan88@gmail.com>",
   "categories": [
     "Other"

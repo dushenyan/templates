@@ -1,7 +1,7 @@
 {
   "name": "geeker-admin",
   "type": "module",
-  "description": "一款基于 Vue 3 + TypeScript + Vite 的管理系统模板",
+  "description": "基于 Vue 3 + TypeScript + Vite 的管理系统模板",
   "scripts": {
     "dev": "vite",
     "serve": "vite",
