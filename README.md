@@ -6,7 +6,6 @@
   <title>templates</title>
   <description>项目模板集合，包含多种技术栈的启动模板</description>
   <repository>https://github.com/dushenyan/templates</repository>
-  <icon>https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/template.svg</icon>
 </div>
 
 ## 🚀 快速开始
