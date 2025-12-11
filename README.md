@@ -2,6 +2,13 @@
 
 这个仓库包含了多个前端项目模板，用于快速初始化不同类型的项目。所有模板都统一使用 `@antfu/eslint-config` 作为代码格式化工具，确保代码风格的一致性。
 
+<div style="display: none;">
+  <title>templates</title>
+  <description>项目模板集合，包含多种技术栈的启动模板</description>
+  <repository>https://github.com/dushenyan/templates</repository>
+  <icon>https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/template.svg</icon>
+</div>
+
 ## 🚀 快速开始
 
 ### 选择合适的模板
