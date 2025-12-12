@@ -31,7 +31,7 @@ onMounted(() => {
         }"
       >
         <div class="list-warpper">
-          <article v-for="(item, index) in list" :key="useId" class="list__item">
+          <article v-for="(item, index) in list" :key="index" class="list__item">
             <section class="item__index">
               {{ `NO.${index + 1}` }}
             </section>

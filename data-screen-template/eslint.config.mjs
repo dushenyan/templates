@@ -7,8 +7,14 @@ export default antfu({
 
   typescript: true,
 
+  ignores: [
+    'public',
+    'design',
+  ],
 }, {
   rules: {
     'no-console': 'off',
+    'array-callback-return': 'off',
+    'ts/explicit-function-return-type': 'off',
   },
 })

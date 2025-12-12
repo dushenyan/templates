@@ -39,7 +39,7 @@ function createEchartBar() {
 
   let maxAmount = 0
   seriesData.map((item) => {
-    item.value > maxAmount ? (maxAmount = item.value) : (maxAmount = maxAmount)
+    item.value > maxAmount && (maxAmount = item.value)
   })
 
   return {

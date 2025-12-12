@@ -2,12 +2,16 @@
 import * as echarts from 'echarts'
 import { onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
 
-const prop = withDefaults(defineProps<{ option: any }>(), {
+const prop = withDefaults(defineProps<{ option: object }>(), {
   option: () => {
     return {}
   },
 })
+
 const emit = defineEmits(['eclick', 'onload'])
+
+let echartsInstance: echarts.ECharts | null = null
+
 const state = reactive({
   option: null,
 })
@@ -22,7 +26,6 @@ watch(
   },
   { immediate: false, deep: true },
 )
-let echartsInstance: echarts.ECharts | null = null
 const echartsRef = ref()
 defineExpose({
   setDataZoom,

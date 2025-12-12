@@ -62,7 +62,7 @@ function initEcharts() {
   ]
   const optionData: any = []
   // 渲染数据，并写入chart
-  wordsData.map((item) => {
+  wordsData.forEach((item) => {
     optionData.push({
       name: item.name,
       number: item.value,
