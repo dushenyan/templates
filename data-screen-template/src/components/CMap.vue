@@ -1,18 +1,19 @@
 <!--  中间地图部分 -->
+<script setup lang="ts">
+import { ref } from 'vue'
+import { getMapOption } from '@/modules/echartMap'
+import CEcharts from './common/CEcharts.vue'
+
+const mapOption = ref(getMapOption())
+</script>
+
 <template>
-  <div class="map" id="map">
+  <div id="map" class="map">
     <div class="map-content">
       <CEcharts :option="mapOption" />
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue'
-import { getMapOption } from '@/modules/echartMap'
-import CEcharts from './common/CEcharts.vue'
-const mapOption = ref(getMapOption())
-</script>
 
 <style lang="scss" scoped>
 .map {

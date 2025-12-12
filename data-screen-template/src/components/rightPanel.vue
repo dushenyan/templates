@@ -1,4 +1,10 @@
 <!-- 右侧数据面板 -->
+<script setup lang="ts">
+import industryRevenue from './rightPanel/industryRevenue.vue'
+import realTimeHotWords from './rightPanel/realTimeHotWords.vue'
+import top5Tourists from './rightPanel/top5Tourists.vue'
+</script>
+
 <template>
   <div class="right-panel">
     <!-- 各行业收入 -->
@@ -9,12 +15,6 @@
     <realTimeHotWords />
   </div>
 </template>
-
-<script setup lang="ts">
-import industryRevenue from './rightPanel/industryRevenue.vue'
-import top5Tourists from './rightPanel/top5Tourists.vue'
-import realTimeHotWords from './rightPanel/realTimeHotWords.vue'
-</script>
 
 <style lang="scss" scoped>
 .right-panel {

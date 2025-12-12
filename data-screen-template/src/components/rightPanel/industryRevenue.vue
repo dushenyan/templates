@@ -1,18 +1,9 @@
 <!-- 各行业收入 -->
-<template>
-  <CPanel>
-    <template #header>各行业收入</template>
-    <template #content>
-      <CEcharts ref="chartRef" :option="option" @onload="startHighlightLoop" />
-    </template>
-  </CPanel>
-</template>
-
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
 import * as echarts from 'echarts'
-import CPanel from '@/components/common/CPanel.vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import CEcharts from '@/components/common/CEcharts.vue'
+import CPanel from '@/components/common/CPanel.vue'
 
 const option = ref<any>({})
 const chartRef = ref()
@@ -20,34 +11,34 @@ let highlightTimer: any = null
 let currentIndex = 0
 const VALUE = [100, 200, 300, 400, 500, 600, 700]
 
-const createEchartBar = () => {
+function createEchartBar() {
   const xAxisData = ['旅游', '住宿', '餐饮', '购物', '娱乐', '交通', '其他']
   const seriesData = [
     {
-      value: 100
+      value: 100,
     },
     {
-      value: 200
+      value: 200,
     },
     {
-      value: 300
+      value: 300,
     },
     {
-      value: 400
+      value: 400,
     },
     {
-      value: 500
+      value: 500,
     },
     {
-      value: 600
+      value: 600,
     },
     {
-      value: 700
-    }
+      value: 700,
+    },
   ]
 
   let maxAmount = 0
-  seriesData.map(item => {
+  seriesData.map((item) => {
     item.value > maxAmount ? (maxAmount = item.value) : (maxAmount = maxAmount)
   })
 
@@ -57,7 +48,7 @@ const createEchartBar = () => {
       right: '0%',
       top: '20%',
       bottom: '10%',
-      containLabel: true
+      containLabel: true,
     },
     xAxis: {
       type: 'category',
@@ -66,49 +57,49 @@ const createEchartBar = () => {
         show: true,
         lineStyle: {
           width: 2,
-          color: 'rgba(76, 93, 130, 1)'
-        }
+          color: 'rgba(76, 93, 130, 1)',
+        },
       },
       axisTick: {
-        show: false
+        show: false,
       },
       axisLabel: {
         fontSize: 12,
         color: '#C5D6E6',
         textStyle: {
-          color: '#C5D6E6'
-        }
-      }
+          color: '#C5D6E6',
+        },
+      },
     },
     yAxis: {
       type: 'value',
       axisLine: {
-        show: false
+        show: false,
       },
       name: '亿',
       nameTextStyle: {
         color: 'rgba(201, 211, 234, 1)',
         fontSize: 14,
-        padding: [0, 32, 12, 0]
+        padding: [0, 32, 12, 0],
       },
       splitLine: {
         show: true,
         lineStyle: {
           color: 'rgba(52, 71, 112, 1)',
-          type: 'dashed'
-        }
+          type: 'dashed',
+        },
       },
       axisTick: {
-        show: false
+        show: false,
       },
       axisLabel: {
         fontSize: 14,
         color: '#C5D6E6',
         textStyle: {
           color: '#C5D6E6',
-          fontSize: 14
-        }
-      }
+          fontSize: 14,
+        },
+      },
     },
     series: [
       {
@@ -128,48 +119,48 @@ const createEchartBar = () => {
             },
             fontSize: 12,
             lineHeight: 16,
-            color: '#93B9FF'
-          }
+            color: '#93B9FF',
+          },
         },
         emphasis: {
           itemStyle: {
             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
               {
                 offset: 0,
-                color: 'rgba(218, 163, 88, 1)'
+                color: 'rgba(218, 163, 88, 1)',
               },
               {
                 offset: 1,
-                color: 'rgba(255, 130, 54, 1)'
-              }
-            ])
-          }
+                color: 'rgba(255, 130, 54, 1)',
+              },
+            ]),
+          },
         },
         itemStyle: {
           normal: {
             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
               {
                 offset: 0,
-                color: 'rgba(197, 213, 249, 1)'
+                color: 'rgba(197, 213, 249, 1)',
               },
               {
                 offset: 1,
-                color: 'rgba(120, 144, 199, 1)'
-              }
-            ])
-          }
+                color: 'rgba(120, 144, 199, 1)',
+              },
+            ]),
+          },
         },
         z: 1,
         zlevel: 0,
-        data: seriesData.map(item => item.value)
+        data: seriesData.map(item => item.value),
       },
       {
         type: 'pictorialBar',
         name: '块状切片',
         itemStyle: {
           normal: {
-            color: '#011140'
-          }
+            color: '#011140',
+          },
         },
         barWidth: 14,
         symbolRepeat: 28,
@@ -180,15 +171,16 @@ const createEchartBar = () => {
         symbolOffset: [0, 0],
         data: seriesData.map(item => item.value),
         z: 2,
-        zlevel: 0
-      }
-    ]
+        zlevel: 0,
+      },
+    ],
   }
 }
 
 // 高亮循环方法
-const startHighlightLoop = (chart: any) => {
-  if (!chart) return
+function startHighlightLoop(chart: any) {
+  if (!chart)
+    return
 
   // 如果已经存在定时器，先清除
   if (highlightTimer) {
@@ -199,13 +191,13 @@ const startHighlightLoop = (chart: any) => {
   highlightTimer = setInterval(() => {
     // 取消之前的高亮
     chart.dispatchAction({
-      type: 'downplay'
+      type: 'downplay',
     })
     // 高亮当前柱子
     chart.dispatchAction({
       type: 'highlight',
       seriesIndex: 0,
-      dataIndex: currentIndex
+      dataIndex: currentIndex,
     })
     // 更新索引，循环
     currentIndex = (currentIndex + 1) % VALUE.length
@@ -221,4 +213,16 @@ onUnmounted(() => {
   }
 })
 </script>
+
+<template>
+  <CPanel>
+    <template #header>
+      各行业收入
+    </template>
+    <template #content>
+      <CEcharts ref="chartRef" :option="option" @onload="startHighlightLoop" />
+    </template>
+  </CPanel>
+</template>
+
 <style lang="scss" scoped></style>

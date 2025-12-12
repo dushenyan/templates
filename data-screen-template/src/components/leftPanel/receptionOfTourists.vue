@@ -1,23 +1,15 @@
 <!-- 年度接待游客比 -->
-<template>
-  <CPanel>
-    <template #header>年度接待游客比</template>
-    <template #content>
-      <CEcharts :option="option" />
-    </template>
-  </CPanel>
-</template>
-
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
 import * as echarts from 'echarts'
-import CPanel from '@/components/common/CPanel.vue'
+import { onMounted, ref } from 'vue'
 import CEcharts from '@/components/common/CEcharts.vue'
+import CPanel from '@/components/common/CPanel.vue'
+
 const option = ref<any>({})
-const createEchartLine = () => {
+function createEchartLine() {
   return {
     tooltip: {
-      trigger: 'axis'
+      trigger: 'axis',
     },
     legend: {
       top: '5%',
@@ -26,14 +18,14 @@ const createEchartLine = () => {
       itemWidth: 15,
       itemHeight: 1,
       textStyle: {
-        color: '#C5D6E6'
-      }
+        color: '#C5D6E6',
+      },
     },
     grid: {
       left: '1%',
       right: '2%',
       bottom: '10%',
-      containLabel: true
+      containLabel: true,
     },
     xAxis: [
       {
@@ -41,18 +33,18 @@ const createEchartLine = () => {
         data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
         axisLabel: {
           textStyle: {
-            color: '#C5D6E6'
-          }
+            color: '#C5D6E6',
+          },
         },
         axisLine: {
           lineStyle: {
-            color: 'rgba(76, 93, 130, 1)'
-          }
+            color: 'rgba(76, 93, 130, 1)',
+          },
         },
         axisTick: {
-          show: false
-        }
-      }
+          show: false,
+        },
+      },
     ],
     yAxis: [
       {
@@ -61,25 +53,25 @@ const createEchartLine = () => {
         nameTextStyle: {
           color: 'rgba(201, 211, 234, 1)',
           fontSize: 14,
-          padding: [0, 32, 12, 0]
+          padding: [0, 32, 12, 0],
         },
         splitNumber: 4,
         splitLine: {
           lineStyle: {
             color: 'rgba(52, 71, 112, 1)',
-            type: 'dashed'
-          }
+            type: 'dashed',
+          },
         },
         axisLabel: {
           textStyle: {
             color: '#C5D6E6',
-            fontSize: 14
-          }
+            fontSize: 14,
+          },
         },
         axisLine: {
-          show: false
-        }
-      }
+          show: false,
+        },
+      },
     ],
     series: [
       {
@@ -92,8 +84,8 @@ const createEchartLine = () => {
             color: 'rgba(218, 163, 88, 1)',
             shadowColor: 'rgba(218, 163, 88, 0.3)',
             shadowBlur: 10,
-            shadowOffsetY: 20
-          }
+            shadowOffsetY: 20,
+          },
         },
         areaStyle: {
           normal: {
@@ -105,22 +97,22 @@ const createEchartLine = () => {
               [
                 {
                   offset: 0,
-                  color: 'rgba(218, 163, 88, 1)'
+                  color: 'rgba(218, 163, 88, 1)',
                 },
                 {
                   offset: 1,
-                  color: 'rgba(218, 163, 88, 0)'
-                }
+                  color: 'rgba(218, 163, 88, 0)',
+                },
               ],
-              false
-            )
-          }
+              false,
+            ),
+          },
         },
         itemStyle: {
-          color: 'rgba(15, 222, 255, 1)'
+          color: 'rgba(15, 222, 255, 1)',
         },
         smooth: true,
-        symbol: 'none'
+        symbol: 'none',
       },
       {
         name: '2022年',
@@ -129,8 +121,8 @@ const createEchartLine = () => {
         lineStyle: {
           normal: {
             width: 2,
-            color: 'rgba(109, 128, 175, 1)'
-          }
+            color: 'rgba(109, 128, 175, 1)',
+          },
         },
         areaStyle: {
           normal: {
@@ -142,28 +134,40 @@ const createEchartLine = () => {
               [
                 {
                   offset: 0,
-                  color: 'rgba(109, 128, 175, 1)'
+                  color: 'rgba(109, 128, 175, 1)',
                 },
                 {
                   offset: 1,
-                  color: 'rgba(109, 128, 175, 0)'
-                }
+                  color: 'rgba(109, 128, 175, 0)',
+                },
               ],
-              false
-            )
-          }
+              false,
+            ),
+          },
         },
         itemStyle: {
-          color: 'rgba(109, 128, 175, 1)'
+          color: 'rgba(109, 128, 175, 1)',
         },
         smooth: true,
-        symbol: 'none'
-      }
-    ]
+        symbol: 'none',
+      },
+    ],
   }
 }
 onMounted(() => {
   option.value = createEchartLine()
 })
 </script>
+
+<template>
+  <CPanel>
+    <template #header>
+      年度接待游客比
+    </template>
+    <template #content>
+      <CEcharts :option="option" />
+    </template>
+  </CPanel>
+</template>
+
 <style lang="scss" scoped></style>

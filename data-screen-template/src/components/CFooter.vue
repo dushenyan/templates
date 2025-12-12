@@ -1,44 +1,14 @@
 <!-- 底部组件 -->
-<template>
-  <footer class="number-footer">
-    <div class="number-item" v-for="item in numberData" :key="item.id">
-      <!-- 标题 -->
-      <div class="title">{{ item.title }}</div>
-      <!-- 数据 -->
-      <div class="data">
-        <img class="data-img" :src="item.img" alt="图标" />
-        <div class="data-info">
-          <!-- 数字 -->
-          <div class="number">
-            <Vue3Odometer class="number-value" :value="item.value" />
-            <span class="number-unit">{{ item.unit }}</span>
-          </div>
-          <!-- 比较信息 -->
-          <div class="compare">
-            <span class="compare-label">较上次</span>
-            <img class="compare-img" :src="item.compare === 'up' ? up : down" alt="上涨下跌图标" />
-            <span
-              class="compare-value"
-              :style="{ color: item.compare === 'up' ? 'rgba(247, 61, 75, 1)' : 'rgba(11, 212, 167, 1)' }"
-            >
-              {{ item.proportion }}%
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-</template>
-
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
 import Vue3Odometer from 'vue3-odometer'
-import 'odometer/themes/odometer-theme-default.css'
-import 行李箱图标 from '@/assets/images/行李箱图标.png'
-import 收入图标 from '@/assets/images/收入图标.png'
-import 刷卡图标 from '@/assets/images/刷卡图标.png'
-import up from '@/assets/images/up.png'
 import down from '@/assets/images/down.png'
+import up from '@/assets/images/up.png'
+import 刷卡图标 from '@/assets/images/刷卡图标.png'
+import 收入图标 from '@/assets/images/收入图标.png'
+import 行李箱图标 from '@/assets/images/行李箱图标.png'
+import 'odometer/themes/odometer-theme-default.css'
+
 const numberData = ref<any>([
   {
     title: '2022年旅游业收入',
@@ -46,7 +16,7 @@ const numberData = ref<any>([
     unit: '万元',
     compare: 'down',
     proportion: 2.9,
-    img: 收入图标
+    img: 收入图标,
   },
   {
     title: '2022年来访游客数',
@@ -54,7 +24,7 @@ const numberData = ref<any>([
     unit: '万人',
     compare: 'up',
     proportion: 1.6,
-    img: 行李箱图标
+    img: 行李箱图标,
   },
   {
     title: '2022年山东人口出游支出',
@@ -62,8 +32,8 @@ const numberData = ref<any>([
     unit: '万元',
     compare: 'down',
     proportion: 2.9,
-    img: 刷卡图标
-  }
+    img: 刷卡图标,
+  },
 ])
 
 let intervalId: any = null
@@ -91,7 +61,7 @@ function randomizeNumberData() {
       ...item,
       value: newValue,
       proportion,
-      compare
+      compare,
     }
   })
 }
@@ -110,6 +80,39 @@ onUnmounted(() => {
   }
 })
 </script>
+
+<template>
+  <footer class="number-footer">
+    <div v-for="item in numberData" :key="item.id" class="number-item">
+      <!-- 标题 -->
+      <div class="title">
+        {{ item.title }}
+      </div>
+      <!-- 数据 -->
+      <div class="data">
+        <img class="data-img" :src="item.img" alt="图标">
+        <div class="data-info">
+          <!-- 数字 -->
+          <div class="number">
+            <Vue3Odometer class="number-value" :value="item.value" />
+            <span class="number-unit">{{ item.unit }}</span>
+          </div>
+          <!-- 比较信息 -->
+          <div class="compare">
+            <span class="compare-label">较上次</span>
+            <img class="compare-img" :src="item.compare === 'up' ? up : down" alt="上涨下跌图标">
+            <span
+              class="compare-value"
+              :style="{ color: item.compare === 'up' ? 'rgba(247, 61, 75, 1)' : 'rgba(11, 212, 167, 1)' }"
+            >
+              {{ item.proportion }}%
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>
 
 <style lang="scss" scoped>
 .number-footer {

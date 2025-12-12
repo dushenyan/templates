@@ -1,4 +1,10 @@
 <!-- 左侧数据面板 -->
+<script setup lang="ts">
+import ageDistribution from './leftPanel/ageDistribution.vue'
+import rankingOfScenicSpots from './leftPanel/rankingOfScenicSpots.vue'
+import receptionOfTourists from './leftPanel/receptionOfTourists.vue'
+</script>
+
 <template>
   <div class="left-panel">
     <!-- 景点人流排名 -->
@@ -9,12 +15,6 @@
     <receptionOfTourists />
   </div>
 </template>
-
-<script setup lang="ts">
-import rankingOfScenicSpots from './leftPanel/rankingOfScenicSpots.vue'
-import ageDistribution from './leftPanel/ageDistribution.vue'
-import receptionOfTourists from './leftPanel/receptionOfTourists.vue'
-</script>
 
 <style lang="scss" scoped>
 .left-panel {

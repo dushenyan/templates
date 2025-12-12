@@ -167,7 +167,7 @@ pnpm preview
 
 - 使用 TypeScript 进行类型安全开发
 - 遵循 Vue 3 Composition API 最佳实践
-- 保持代码风格一致，使用 ESLint + Prettier
+- 保持代码风格一致，使用 ESLint Configs
 - 添加适当的注释和文档
 
 ### 提交规范

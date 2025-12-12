@@ -1,16 +1,18 @@
 <!-- 通用面板 -->
+<script setup lang="ts"></script>
+
 <template>
   <div class="panel">
     <div class="panel-header">
-      <slot name="header">默认名称</slot>
+      <slot name="header">
+        默认名称
+      </slot>
     </div>
     <div class="panel-container">
-      <slot name="content"></slot>
+      <slot name="content" />
     </div>
   </div>
 </template>
-
-<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 .panel {

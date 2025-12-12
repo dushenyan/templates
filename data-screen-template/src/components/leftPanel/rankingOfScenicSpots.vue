@@ -1,27 +1,51 @@
 <!-- 景点人流排名 -->
+<script setup lang="ts">
+import { onMounted, ref, useId } from 'vue'
+import { vue3ScrollSeamless } from 'vue3-scroll-seamless'
+import { rankingOfScenicSpots } from '@/assets/data/人流排名'
+import CPanel from '@/components/common/CPanel.vue'
+
+const list = ref<{ label: string, value: number }[]>([])
+let maxValue = 0
+// 计算进度
+function getProgressValue(value: number) {
+  return `${-((maxValue - value) / maxValue) * 100}%`
+}
+onMounted(() => {
+  list.value = rankingOfScenicSpots.sort((a, b) => b.value - a.value)
+  maxValue = rankingOfScenicSpots.reduce((acc, item) => acc + item.value, 0)
+})
+</script>
+
 <template>
   <CPanel>
-    <template #header>景点人流排名</template>
+    <template #header>
+      景点人流排名
+    </template>
     <template #content>
       <vue3ScrollSeamless
-        :dataList="list"
+        :data-list="list"
         class="list"
         :class-option="{
-          limitMoveNum: 5
+          limitMoveNum: 5,
         }"
       >
         <div class="list-warpper">
-          <article class="list__item" v-for="(item, index) in list" :key="useId">
-            <section class="item__index">{{ 'NO.' + (index + 1) }}</section>
-            <section class="item__label">{{ item.label }}</section>
+          <article v-for="(item, index) in list" :key="useId" class="list__item">
+            <section class="item__index">
+              {{ `NO.${index + 1}` }}
+            </section>
+            <section class="item__label">
+              {{ item.label }}
+            </section>
             <!-- 进度条 -->
             <div class="progress">
               <span
                 class="progress__conent"
                 :style="{
-                  left: getProgressValue(item.value)
+                  left: getProgressValue(item.value),
                 }"
-              ></span>
+              />
             </div>
           </article>
         </div>
@@ -30,22 +54,6 @@
   </CPanel>
 </template>
 
-<script setup lang="ts">
-import { vue3ScrollSeamless } from 'vue3-scroll-seamless'
-import CPanel from '@/components/common/CPanel.vue'
-import { onMounted, ref, useId } from 'vue'
-import { rankingOfScenicSpots } from '@/assets/data/人流排名'
-const list = ref<{ label: string; value: number }[]>([])
-let maxValue = 0
-// 计算进度
-const getProgressValue = (value: number) => {
-  return -((maxValue - value) / maxValue) * 100 + '%'
-}
-onMounted(() => {
-  list.value = rankingOfScenicSpots.sort((a, b) => b.value - a.value)
-  maxValue = rankingOfScenicSpots.reduce((acc, item) => acc + item.value, 0)
-})
-</script>
 <style lang="scss" scoped>
 .list {
   max-height: 200px;

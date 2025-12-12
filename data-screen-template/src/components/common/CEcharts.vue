@@ -1,17 +1,15 @@
-<template>
-  <div class="echarts" ref="echartsRef"></div>
-</template>
-
 <script lang="ts" setup>
-import { ref, reactive, watch, onMounted, onBeforeUnmount } from 'vue'
 import * as echarts from 'echarts'
+import { onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
+
 const prop = withDefaults(defineProps<{ option: any }>(), {
   option: () => {
     return {}
-  }
+  },
 })
+const emit = defineEmits(['eclick', 'onload'])
 const state = reactive({
-  option: null
+  option: null,
 })
 watch(
   () => prop.option,
@@ -22,14 +20,14 @@ watch(
       emit('onload', echartsInstance)
     }
   },
-  { immediate: false, deep: true }
+  { immediate: false, deep: true },
 )
 let echartsInstance: echarts.ECharts | null = null
 const echartsRef = ref()
 defineExpose({
-  setDataZoom
+  setDataZoom,
 })
-const echartsResize = () => {
+function echartsResize() {
   console.log('resize')
   echartsInstance?.resize()
 }
@@ -38,16 +36,16 @@ function setDataZoom(start: any, end: any) {
   ;(state.option as any).dataZoom[0].end = end
   echartsInstance?.setOption(state.option as any)
 }
-const emit = defineEmits(['eclick', 'onload'])
 onMounted(() => {
   state.option = prop.option
   if (echartsInstance) {
     if (state.option) {
       echartsInstance?.setOption(state.option)
     }
-  } else {
+  }
+  else {
     echartsInstance = echarts.init(echartsRef.value as HTMLDivElement)
-    echartsInstance.on('click', function (val) {
+    echartsInstance.on('click', (val) => {
       Eaclick(val)
     })
     if (state.option) {
@@ -56,15 +54,20 @@ onMounted(() => {
   }
   window.addEventListener('resize', echartsResize)
 })
-const Eaclick = (val: any) => {
+function Eaclick(val: any) {
   emit('eclick', val)
 }
 onBeforeUnmount(() => {
-  if (!echartsInstance) return
+  if (!echartsInstance)
+    return
   window.removeEventListener('resize', echartsResize)
   echartsInstance.dispose()
 })
 </script>
+
+<template>
+  <div ref="echartsRef" class="echarts" />
+</template>
 
 <style scoped lang="scss">
 .echarts {

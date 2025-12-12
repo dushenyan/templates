@@ -1,18 +1,6 @@
 <!-- 顶部标题 -->
-<template>
-  <header class="header">山东省旅游指标监控平台</header>
-  <!-- 文字轮播 -->
-  <div class="text-carousel">
-    <transition-group name="carousel" tag="div" class="carousel-container">
-      <div class="text-carousel-item" :key="currentIndex" v-show="currentIndex === getCurrentItemIndex()">
-        {{ getCurrentItem() }}
-      </div>
-    </transition-group>
-  </div>
-</template>
-
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 // 轮播数据
 const carouselData = ref([
@@ -32,7 +20,7 @@ const carouselData = ref([
   '聊城市东昌湖景区举办荷花节活动',
   '菏泽市牡丹园景区新增夜间灯光秀表演',
   '枣庄市台儿庄古城景区推出运河文化体验游',
-  '济宁市曲阜三孔景区举办传统文化研学活动'
+  '济宁市曲阜三孔景区举办传统文化研学活动',
 ])
 
 // 状态管理
@@ -45,23 +33,25 @@ const isPaused = ref(false)
 const CONFIG = {
   INTERVAL: 5000, // 轮播间隔时间（毫秒）
   ANIMATION_DURATION: 500, // 动画持续时间（毫秒）
-  DEBOUNCE_DELAY: 100 // 防抖延迟时间（毫秒）
+  DEBOUNCE_DELAY: 100, // 防抖延迟时间（毫秒）
 }
 
 // 获取当前显示的项目
-const getCurrentItem = (): string => {
-  if (carouselData.value.length === 0) return ''
+function getCurrentItem(): string {
+  if (carouselData.value.length === 0)
+    return ''
   return carouselData.value[currentIndex.value]
 }
 
 // 获取当前项目索引（用于动画）
-const getCurrentItemIndex = (): number => {
+function getCurrentItemIndex(): number {
   return currentIndex.value
 }
 
 // 切换到下一项
-const nextItem = (): void => {
-  if (isAnimating.value || isPaused.value) return
+function nextItem(): void {
+  if (isAnimating.value || isPaused.value)
+    return
 
   try {
     isAnimating.value = true
@@ -70,15 +60,17 @@ const nextItem = (): void => {
       currentIndex.value = (currentIndex.value + 1) % carouselData.value.length
       isAnimating.value = false
     }, CONFIG.ANIMATION_DURATION)
-  } catch (error) {
+  }
+  catch (error) {
     console.error('轮播切换出错:', error)
     isAnimating.value = false
   }
 }
 
 // 启动轮播
-const startCarousel = (): void => {
-  if (timer.value) clearInterval(timer.value)
+function startCarousel(): void {
+  if (timer.value)
+    clearInterval(timer.value)
   timer.value = window.setInterval(() => {
     nextItem()
   }, CONFIG.INTERVAL)
@@ -96,6 +88,20 @@ onBeforeUnmount(() => {
   }
 })
 </script>
+
+<template>
+  <header class="header">
+    山东省旅游指标监控平台
+  </header>
+  <!-- 文字轮播 -->
+  <div class="text-carousel">
+    <transition-group name="carousel" tag="div" class="carousel-container">
+      <div v-show="currentIndex === getCurrentItemIndex()" :key="currentIndex" class="text-carousel-item">
+        {{ getCurrentItem() }}
+      </div>
+    </transition-group>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 .header {
