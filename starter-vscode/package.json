@@ -4,8 +4,11 @@
   "displayName": "pkg-name",
   "version": "0.0.1",
   "packageManager": "pnpm@10.25.0",
-  "description": "快速创建VS Code扩展模板项目",
+  "__description__": "快速创建VS Code扩展模板项目",
+  "description": "description",
   "author": "dushenyan<dushenyan88@gmail.com>",
+  "homepage": "https://pkg-name.netlify.app/",
+  "repository": "https://github.com/dushenyan/pkg-name",
   "categories": [
     "Other"
   ],

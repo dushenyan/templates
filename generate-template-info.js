@@ -43,7 +43,7 @@ function generateTemplateInfo() {
       try {
         const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
         templateInfo.name = dir;
-        templateInfo.description = packageJson.description || '';
+        templateInfo.description = packageJson['__description__'] || '';
 
       } catch (err) {
         console.warn(`读取 ${dir}/package.json 时出错:`, err.message);

@@ -1,9 +1,13 @@
 {
   "name": "pkg-name",
   "type": "module",
-  "version": "0.1.0",
-  "private": true,
-  "description": "创建Uniapp重量级项目",
+  "version": "0.0.1",
+  "packageManager": "pnpm@10.25.0",
+  "__description__": "创建Uniapp重量级项目",
+  "description": "description",
+  "author": "dushenyan<dushenyan88@gmail.com>",
+  "homepage": "https://pkg-name.netlify.app/",
+  "repository": "https://github.com/dushenyan/pkg-name",
   "scripts": {
     "dev": "unh dev",
     "build": "unh build",

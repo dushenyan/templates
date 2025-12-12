@@ -1,7 +1,12 @@
 {
   "name": "geeker-admin",
   "type": "module",
-  "description": "基于 Vue 3 + TypeScript + Vite 的管理系统模板",
+  "packageManager": "pnpm@10.25.0",
+  "__description__": "基于 Vue 3 + TypeScript + Vite 的管理系统模板",
+  "description": "description",
+  "author": "dushenyan<dushenyan88@gmail.com>",
+  "homepage": "https://pkg-name.netlify.app/",
+  "repository": "https://github.com/dushenyan/pkg-name",
   "scripts": {
     "dev": "vite",
     "serve": "vite",
